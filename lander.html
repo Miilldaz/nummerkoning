@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Reading met Robbin - Weet Precies Wat Je Te Wachten Staat</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary: #5D3A9B;
+            --color-primary-dark: #4A2E7D;
+            --color-primary-light: #7B5CAD;
+            --color-secondary: #FF944E;
+            --color-secondary-dark: #E67A35;
+            --color-secondary-light: #FFB380;
+            --color-accent: #FF944E;
+            --color-text: #000000;
+            --color-text-light: #4A4A4A;
+            --color-background: #FFFFFF;
+            --color-gray-light: #F9F8FC;
+            --color-gray-medium: #F3F1F7;
+            --color-border: #E8E5EE;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-serif: 'Playfair Display', serif;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--color-text);
+            line-height: 1.6;
+            background-color: #0a0a0f;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+
+        /* Remove number input spinners */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        /* Cosmic Background for all sections */
+        .cosmic-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .stars, .stars2, .stars3 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+        }
+
+        .stars {
+            background-image: radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+                              radial-gradient(2px 2px at 40px 70px, #fff, transparent),
+                              radial-gradient(1px 1px at 50px 160px, #fff, transparent),
+                              radial-gradient(1px 1px at 130px 40px, #fff, transparent);
+            background-size: 200px 200px;
+            animation: starsAnimation 120s linear infinite;
+        }
+
+        .stars2 {
+            background-image: radial-gradient(1px 1px at 150px 150px, #fff, transparent),
+                              radial-gradient(1px 1px at 60px 170px, #fff, transparent),
+                              radial-gradient(1px 1px at 180px 10px, #fff, transparent);
+            background-size: 200px 200px;
+            animation: starsAnimation 240s linear infinite;
+        }
+
+        .stars3 {
+            background-image: radial-gradient(1px 1px at 90px 90px, rgba(255, 148, 78, 0.8), transparent),
+                              radial-gradient(1px 1px at 130px 160px, rgba(93, 58, 155, 0.8), transparent);
+            background-size: 200px 200px;
+            animation: starsAnimation 360s linear infinite;
+        }
+
+        @keyframes starsAnimation {
+            from { transform: translateY(0); }
+            to { transform: translateY(-200px); }
+        }
+
+        /* Sacred Geometry */
+        .sacred-geometry {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            pointer-events: none;
+            opacity: 0.3;
+        }
+
+        .metatron-cube {
+            width: 100%;
+            height: 100%;
+            color: var(--color-primary);
+            animation: rotateSlowly 120s linear infinite;
+        }
+
+        @keyframes rotateSlowly {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Floating Life Path Numbers */
+        .numerology-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+
+        .life-path-circle {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(93, 58, 155, 0.3), transparent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: floatOrbit 30s infinite ease-in-out;
+        }
+
+        .life-path-circle span {
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .life-path-circle .orbit {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgba(255, 148, 78, 0.3);
+            border-radius: 50%;
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        .life-path-circle:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
+        .life-path-circle:nth-child(2) { top: 20%; right: 15%; animation-delay: 1s; }
+        .life-path-circle:nth-child(3) { bottom: 30%; left: 15%; animation-delay: 2s; }
+        .life-path-circle:nth-child(4) { bottom: 20%; right: 20%; animation-delay: 3s; }
+        .life-path-circle:nth-child(5) { top: 50%; left: 80%; animation-delay: 4s; }
+
+        @keyframes floatOrbit {
+            0%, 100% { transform: translateY(0) scale(1); }
+            25% { transform: translateY(-30px) scale(1.1); }
+            50% { transform: translateY(0) scale(1); }
+            75% { transform: translateY(30px) scale(0.9); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.5; }
+        }
+
+        /* Calculator Section with Hero Style */
+        .calculator-section {
+            background: #0a0a0f;
+            padding: 100px 0 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: auto;
+        }
+
+        .calculator-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .mystical-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--color-secondary);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .badge-stars {
+            color: var(--color-primary);
+            animation: twinkle 2s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .hero-title {
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .title-small {
+            display: block;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .title-main {
+            display: block;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-family: var(--font-serif);
+            line-height: 1.3;
+            padding-bottom: 5px;
+        }
+
+        .gradient-text {
+            color: white !important;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3), 0 4px 20px rgba(93, 58, 155, 0.3);
+            font-weight: 700;
+        }
+
+        /* Calculator Redesign */
+        .birth-date-preview {
+            background: rgba(93, 58, 155, 0.1);
+            border: 2px solid rgba(93, 58, 155, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 500px;
+            margin: 0 auto;
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        .calculator-header {
+            margin-bottom: 25px;
+        }
+
+        .calculator-title {
+            display: block;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .calculator-subtitle {
+            display: block;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .date-input-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .date-separator {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 1.5rem;
+        }
+
+        .date-input {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 148, 78, 0.3);
+            color: white;
+            padding: 12px;
+            font-size: 1.125rem;
+            text-align: center;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .date-input:focus {
+            outline: none;
+            border-color: var(--color-secondary);
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 148, 78, 0.4);
+        }
+
+        .date-input.day, .date-input.month { width: 60px; }
+        .date-input.year { width: 100px; }
+
+        .calculate-btn {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-dark) 100%);
+            color: white;
+            padding: 16px 40px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 148, 78, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calculate-btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .calculate-btn:hover:before {
+            left: 100%;
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255, 148, 78, 0.5);
+        }
+
+        .life-path-preview {
+            margin-top: 25px;
+            padding: 20px;
+            background: rgba(255, 148, 78, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 148, 78, 0.2);
+        }
+
+        .preview-number {
+            display: block;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .result-display {
+            margin-top: 30px;
+            padding: 25px;
+            background: rgba(93, 58, 155, 0.15);
+            border: 2px solid rgba(93, 58, 155, 0.4);
+            border-radius: 15px;
+            display: none;
+            animation: fadeInUp 0.6s ease;
+            text-align: center;
+        }
+
+        .result-display.show {
+            display: block;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .life-path-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--color-secondary);
+            margin-bottom: 15px;
+            text-shadow: 0 0 30px rgba(255, 148, 78, 0.6);
+        }
+
+        .result-text {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.125rem;
+            margin-bottom: 20px;
+        }
+
+        /* Authority Review with Cosmic Style */
+        .authority-review {
+            background: linear-gradient(180deg, #0a0a0f 0%, #1a1a2f 50%, #0a0a0f 100%);
+            padding: 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: -80px;
+        }
+
+        .review-content {
+            position: relative;
+            z-index: 10;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background: rgba(93, 58, 155, 0.1);
+            border: 2px solid rgba(93, 58, 155, 0.3);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .review-stars {
+            color: #FFB400;
+            font-size: 24px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 20px rgba(255, 180, 0, 0.5);
+        }
+
+        .review-text {
+            font-size: 1.125rem;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .review-author {
+            font-weight: 600;
+            color: var(--color-secondary);
+            font-size: 0.875rem;
+        }
+
+        /* Video Section with Cosmic Background */
+        .video-section {
+            padding: 0 0 80px;
+            text-align: center;
+            background: #0a0a0f;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Video Review Section */
+        .video-review-section {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-top: 0;
+        }
+
+        .video-review-stars {
+            color: #FFB400;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .video-review-text {
+            font-size: 1rem;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 8px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.4;
+        }
+
+        .video-review-author {
+            font-weight: 500;
+            color: var(--color-secondary);
+            font-size: 0.875rem;
+        }
+
+        .video-headline {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 50px;
+            line-height: 1.3;
+            color: white;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3), 0 4px 20px rgba(93, 58, 155, 0.3);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin-bottom: 50px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 60px rgba(93, 58, 155, 0.3);
+            background: #000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* CTA Button Cosmic Style */
+        .cta-button {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-dark) 100%);
+            color: white;
+            padding: 25px 60px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(255, 148, 78, 0.3), 0 0 60px rgba(255, 148, 78, 0.2);
+            position: relative;
+            overflow: hidden;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 10px 30px rgba(255, 148, 78, 0.3), 0 0 60px rgba(255, 148, 78, 0.2); }
+            to { box-shadow: 0 10px 30px rgba(255, 148, 78, 0.5), 0 0 80px rgba(255, 148, 78, 0.4); }
+        }
+
+        .cta-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover:before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        /* Small Review under CTA */
+        .cta-review {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background: rgba(93, 58, 155, 0.1);
+            border-radius: 20px;
+            border: 2px solid rgba(93, 58, 155, 0.3);
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        .cta-review-text {
+            font-size: 1.125rem;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 10px;
+        }
+
+        .cta-review-author {
+            font-weight: 600;
+            color: var(--color-secondary);
+        }
+
+        /* Offer Section Cosmic Style */
+        .offer-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #0a0a0f 0%, #1a1a2f 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .offer-title {
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+            color: white;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .offer-list {
+            list-style: none;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px;
+            background: rgba(93, 58, 155, 0.1);
+            border: 2px solid rgba(93, 58, 155, 0.3);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .offer-list li {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(93, 58, 155, 0.2);
+            font-size: 1.125rem;
+            position: relative;
+            padding-left: 50px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .offer-list li:last-child {
+            border-bottom: none;
+        }
+
+        .offer-list li:before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--color-secondary);
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 148, 78, 0.5);
+        }
+
+        /* Benefits Section Cosmic */
+        .benefits-section {
+            padding: 80px 0;
+            background: #0a0a0f;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefits-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            color: white;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3), 0 4px 20px rgba(93, 58, 155, 0.3);
+        }
+
+        .benefit-item {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(93, 58, 155, 0.1) 0%, rgba(255, 148, 78, 0.1) 100%);
+            border-left: 6px solid var(--color-secondary);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-item:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 148, 78, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .benefit-item:hover:before {
+            opacity: 1;
+        }
+
+        .benefit-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(255, 148, 78, 0.2);
+        }
+
+        .benefit-text {
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.9);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Testimonials Cosmic */
+        .testimonials-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, #0a0a0f 0%, #1a1a2f 50%, #0a0a0f 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            color: white;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .testimonial {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            padding: 35px;
+            background: rgba(93, 58, 155, 0.1);
+            border-radius: 20px;
+            border: 2px solid rgba(93, 58, 155, 0.3);
+            backdrop-filter: blur(10px);
+            position: relative;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(93, 58, 155, 0.3);
+        }
+
+        .testimonial:before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 30px;
+            font-size: 80px;
+            color: var(--color-secondary);
+            opacity: 0.3;
+            font-family: serif;
+        }
+
+        .testimonial-text {
+            font-size: 1.125rem;
+            font-style: italic;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--color-secondary);
+            text-shadow: 0 0 10px rgba(255, 148, 78, 0.3);
+        }
+
+        /* Final CTA with Urgency Cosmic */
+        .final-cta-section {
+            padding: 100px 0;
+            text-align: center;
+            background: #0a0a0f;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .urgency-text {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: var(--color-secondary);
+            text-shadow: 0 0 20px rgba(255, 148, 78, 0.5);
+            animation: pulse-text 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-text {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+
+        .countdown {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: white;
+            text-shadow: 0 0 30px rgba(255, 148, 78, 0.6);
+            font-family: monospace;
+            letter-spacing: 0.1em;
+            background: linear-gradient(135deg, var(--color-secondary), var(--color-secondary-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .final-cta-button {
+            background: linear-gradient(135deg, white 0%, #f0f0f0 100%);
+            color: var(--color-primary);
+            padding: 25px 60px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2), 0 0 60px rgba(255, 255, 255, 0.1);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .final-cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.3), 0 0 80px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Robbin Image Styling */
+        .robbin-image-wrapper {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 40px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .robbin-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--color-secondary);
+            box-shadow: 0 0 40px rgba(255, 148, 78, 0.5);
+            position: relative;
+            z-index: 2;
+        }
+
+        .cosmic-glow {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: radial-gradient(circle, rgba(93, 58, 155, 0.4) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .floating-numbers {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .floating-number {
+            position: absolute;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--color-secondary);
+            text-shadow: 0 0 20px rgba(255, 148, 78, 0.8);
+            animation: orbit 15s linear infinite;
+            animation-delay: var(--delay);
+        }
+
+        .floating-number:nth-child(1) { --orbit-radius: 120px; }
+        .floating-number:nth-child(2) { --orbit-radius: 140px; }
+        .floating-number:nth-child(3) { --orbit-radius: 100px; }
+
+        @keyframes orbit {
+            from {
+                transform: rotate(0deg) translateX(var(--orbit-radius)) rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg) translateX(var(--orbit-radius)) rotate(-360deg);
+            }
+        }
+
+        /* Zodiac Wheel Background */
+        .zodiac-wheel {
+            position: absolute;
+            top: 50%;
+            right: -200px;
+            transform: translateY(-50%);
+            width: 500px;
+            height: 500px;
+            pointer-events: none;
+            opacity: 0.3;
+        }
+
+        .rotating-zodiac {
+            width: 100%;
+            height: 100%;
+            animation: rotateSlowly 240s linear infinite reverse;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .video-headline, .benefits-title, .testimonials-title {
+                font-size: 1.75rem;
+            }
+
+            .cta-button, .final-cta-button {
+                font-size: 1.25rem;
+                padding: 20px 40px;
+            }
+
+            .benefit-text {
+                font-size: 1.125rem;
+            }
+
+            .date-input-group {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .date-input.day, .date-input.month { width: 50px; }
+            .date-input.year { width: 80px; }
+
+            .countdown {
+                font-size: 2.5rem;
+            }
+
+            .life-path-number {
+                font-size: 2.5rem;
+            }
+
+            .sacred-geometry {
+                width: 400px;
+                height: 400px;
+            }
+
+            .life-path-circle {
+                width: 45px;
+                height: 45px;
+            }
+
+            .life-path-circle span {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Calculator Section with Hero Style -->
+    <section class="calculator-section">
+        <!-- Cosmic Background Elements -->
+        <div class="cosmic-bg">
+            <div class="stars"></div>
+            <div class="stars2"></div>
+            <div class="stars3"></div>
+        </div>
+        
+        <!-- Sacred Geometry Pattern -->
+        <div class="sacred-geometry">
+            <svg class="metatron-cube" viewBox="0 0 400 400" fill="none">
+                <circle cx="200" cy="200" r="180" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+                <circle cx="200" cy="200" r="150" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+                <circle cx="200" cy="200" r="120" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+                <circle cx="200" cy="200" r="90" stroke="currentColor" stroke-width="0.5" opacity="0.15"/>
+                <circle cx="200" cy="200" r="60" stroke="currentColor" stroke-width="0.5" opacity="0.15"/>
+                <circle cx="200" cy="200" r="30" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
+            </svg>
+        </div>
+        
+        <!-- Floating Numerology Elements -->
+        <div class="numerology-elements">
+            <div class="life-path-circle" data-number="1">
+                <span>1</span>
+                <div class="orbit"></div>
+            </div>
+            <div class="life-path-circle" data-number="9">
+                <span>9</span>
+                <div class="orbit"></div>
+            </div>
+            <div class="life-path-circle" data-number="11">
+                <span>11</span>
+                <div class="orbit"></div>
+            </div>
+            <div class="life-path-circle" data-number="22">
+                <span>22</span>
+                <div class="orbit"></div>
+            </div>
+            <div class="life-path-circle" data-number="33">
+                <span>33</span>
+                <div class="orbit"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="calculator-content">
+                <div class="mystical-badge">
+                    <span class="badge-stars">✦ ✧ ✦</span>
+                    <span>300+ mensen geholpen</span>
+                    <span class="badge-stars">✦ ✧ ✦</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-small">Je geboortedatum liegt niet</span>
+                    <span class="title-main gradient-text">Jij probeert alleen iets anders te zijn</span>
+                </h1>
+                
+                <div class="birth-date-preview">
+                    <div class="calculator-header">
+                        <span class="calculator-title">Vul je geboortedatum in</span>
+                        <span class="calculator-subtitle">Dit getal vertelt wie je bent</span>
+                    </div>
+                    <div class="date-input-group">
+                        <input type="number" class="date-input day" placeholder="DD" min="1" max="31" maxlength="2">
+                        <span class="date-separator">/</span>
+                        <input type="number" class="date-input month" placeholder="MM" min="1" max="12" maxlength="2">
+                        <span class="date-separator">/</span>
+                        <input type="number" class="date-input year" placeholder="JJJJ" min="1900" max="2025" maxlength="4">
+                    </div>
+                    
+                    <div id="result" class="result-display">
+                        <div class="life-path-number" id="lifePathNumber"></div>
+                        <p class="result-text" id="resultText">Dit is je levensgetal. Het onthult je natuurlijke talenten en de weg die voor jou bestemd is.</p>
+                        <button class="calculate-btn" onclick="scrollToVideo()">Ik wil weten wat dit betekend</button>
+                    </div>
+                    
+                    <div class="life-path-preview">
+                        <span class="preview-number">
+                            <div style="display: flex; gap: 30px; justify-content: center; align-items: center;">
+                                <div style="text-align: center;">
+                                    <div style="font-size: 0.75rem; color: rgba(255,255,255,0.9); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Levenspad</div>
+                                    <div style="display: flex; gap: 10px; align-items: center;">
+                                        <span style="font-size: 1.8rem; font-weight: bold; color: #FF944E;">?</span>
+                                        <span style="font-size: 1.2rem; color: rgba(255,255,255,0.3);">•</span>
+                                        <span style="font-size: 1.8rem; font-weight: bold; color: #5D3A9B;">?</span>
+                                    </div>
+                                </div>
+                                <span style="font-size: 1.5rem; color: rgba(255,255,255,0.2);">|</span>
+                                <div style="text-align: center;">
+                                    <div style="font-size: 0.75rem; color: rgba(255,255,255,0.9); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Zielsgetal</div>
+                                    <span style="font-size: 1.8rem; font-weight: bold; color: #fff;">?</span>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="cosmic-bg">
+            <div class="stars"></div>
+            <div class="stars2"></div>
+        </div>
+        
+        <!-- Zodiac Wheel Background -->
+        <div class="zodiac-wheel">
+            <svg viewBox="0 0 500 500" class="rotating-zodiac">
+                <circle cx="250" cy="250" r="240" fill="none" stroke="url(#zodiacGradient)" stroke-width="1" opacity="0.2"/>
+                <circle cx="250" cy="250" r="200" fill="none" stroke="url(#zodiacGradient)" stroke-width="0.5" opacity="0.1"/>
+                <circle cx="250" cy="250" r="160" fill="none" stroke="url(#zodiacGradient)" stroke-width="0.5" opacity="0.1"/>
+                <defs>
+                    <linearGradient id="zodiacGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#5D3A9B;stop-opacity:0.3"/>
+                        <stop offset="100%" style="stop-color:#FF944E;stop-opacity:0.3"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        
+        <div class="container">
+            <div class="video-review-section">
+                <div class="video-review-stars">★★★★★</div>
+                <p class="video-review-text">"Robbin zei: in maart gebeurt het. Het gebeurde. Nu snap ik waarom ik altijd te vroeg of te laat was."</p>
+                <p class="video-review-author">- Sandra K.</p>
+            </div>
+            <h1 class="video-headline">Voel je dat je iets belangrijks moet doen in dit leven, maar weet je nog niet wat het is?</h1>
+            
+            <div class="video-wrapper">
+                <!-- Replace with actual video embed code -->
+                <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+            <a href="https://calendly.com/28core/master-bundel-xl-reading-stripe" class="cta-button">Boek nu je Premium Reading – €199</a>
+            
+            <div class="cta-review">
+                <div class="review-stars">★★★★★</div>
+                <p class="cta-review-text">"Ik dacht altijd dat ik pech had. Bleek dat ik gewoon op de verkeerde momenten dingen deed."</p>
+                <p class="cta-review-author">- Mark D.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section class="offer-section">
+        <div class="cosmic-bg">
+            <div class="stars"></div>
+        </div>
+        <div class="container">
+            <h2 class="offer-title">Dit krijg je voor €199 (normaal €330)</h2>
+            <ul class="offer-list">
+                <li>Premium 1-op-1 Reading (90 minuten) – normaal €165</li>
+                <li>Numerologie Kalender 2025 – normaal €45</li>
+                <li>E-book "Waarom je manifestaties niet lukken" – normaal €30</li>
+                <li>Boek "De Kracht van Timing" (60+ pagina's) – normaal €90</li>
+                <li>Je krijgt alles alleen als je binnen 15 minuten boekt</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="cosmic-bg">
+            <div class="stars"></div>
+            <div class="stars3"></div>
+        </div>
+        
+        <!-- Floating Numerology Elements -->
+        <div class="numerology-elements">
+            <div class="life-path-circle" style="top: 10%; left: 5%;">
+                <span>3</span>
+                <div class="orbit"></div>
+            </div>
+            <div class="life-path-circle" style="bottom: 15%; right: 10%;">
+                <span>7</span>
+                <div class="orbit"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h2 class="benefits-title">Dit is wat je straks weet</h2>
+            
+            <div class="benefit-item">
+                <p class="benefit-text">Wanneer je wel en wanneer je niet moet beginnen met iets nieuws</p>
+            </div>
+            
+            <div class="benefit-item">
+                <p class="benefit-text">Waarom sommige jaren top zijn en andere jaren niet</p>
+            </div>
+            
+            <div class="benefit-item">
+                <p class="benefit-text">Wat voor jou werkt (en wat je beter kunt laten)</p>
+            </div>
+            
+            <div class="benefit-item">
+                <p class="benefit-text">Waarom je steeds dezelfde fouten maakt (en hoe je dat stopt)</p>
+            </div>
+            
+            <div class="benefit-item">
+                <p class="benefit-text">Wat 2025 voor jou betekent (en de 5 jaar erna)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="cosmic-bg">
+            <div class="stars2"></div>
+        </div>
+        <div class="container">
+            <h2 class="testimonials-title">Dit zeggen anderen</h2>
+            
+            <div class="testimonial">
+                <div class="review-stars">★★★★★</div>
+                <p class="testimonial-text">"Maart zou mijn maand worden. Ik geloofde het niet. Toen belde die klant die ik al 2 jaar probeerde te krijgen."</p>
+                <p class="testimonial-author">- Lisa M.</p>
+            </div>
+            
+            <div class="testimonial">
+                <div class="review-stars">★★★★★</div>
+                <p class="testimonial-text">"Bijna had ik die zaak gekocht. Robbin zei: wacht tot oktober. Goed dat ik luisterde. Die zaak ging 3 maanden later failliet."</p>
+                <p class="testimonial-author">- Johan V.</p>
+            </div>
+            
+            <div class="testimonial">
+                <div class="review-stars">★★★★★</div>
+                <p class="testimonial-text">"Eindelijk snapte ik waarom niks lukte. Ik deed alles op het verkeerde moment. Nu gaat het gewoon goed."</p>
+                <p class="testimonial-author">- Petra R.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA with Urgency -->
+    <section class="final-cta-section">
+        <div class="cosmic-bg">
+            <div class="stars"></div>
+            <div class="stars2"></div>
+            <div class="stars3"></div>
+        </div>
+        
+        <!-- Sacred Geometry Pattern -->
+        <div class="sacred-geometry">
+            <svg class="metatron-cube" viewBox="0 0 400 400" fill="none">
+                <circle cx="200" cy="200" r="180" stroke="white" stroke-width="0.5" opacity="0.05"/>
+                <circle cx="200" cy="200" r="150" stroke="white" stroke-width="0.5" opacity="0.05"/>
+                <circle cx="200" cy="200" r="120" stroke="white" stroke-width="0.5" opacity="0.05"/>
+            </svg>
+        </div>
+        
+        <div class="container">
+            <div class="final-cta-content">
+                <div class="robbin-image-wrapper">
+                    <div class="cosmic-glow"></div>
+                    <img src="https://cdn.shopify.com/s/files/1/0922/2212/8463/files/Robbin_de_nummerkoning_shopify_pf_1.png?v=1743837121" alt="Robbin de Nummerkoning" class="robbin-image">
+                    <div class="floating-numbers">
+                        <span class="floating-number" style="--delay: 0s;">3</span>
+                        <span class="floating-number" style="--delay: 1s;">7</span>
+                        <span class="floating-number" style="--delay: 2s;">11</span>
+                    </div>
+                </div>
+                <p class="urgency-text">Deze week nog 3 plekken vrij</p>
+                <div class="countdown" id="countdown">14:59:48</div>
+                <a href="https://calendly.com/28core/master-bundel-xl-reading-stripe" class="final-cta-button">Ja, ik wil weten wat er gaat gebeuren – €199</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Life Path Number Calculator
+        function calculateLifePath() {
+            const day = document.querySelector('.date-input.day').value;
+            const month = document.querySelector('.date-input.month').value;
+            const year = document.querySelector('.date-input.year').value;
+            
+            if (day && month && year) {
+                // 1. Life Path Number (Reduced)
+                // Add full day + full month + individual digits of year
+                let reduced = parseInt(day) + parseInt(month);
+                for (let digit of year) {
+                    reduced += parseInt(digit);
+                }
+                
+                // 2. Life Path Number (Unreduced)
+                // Split every digit and add them together
+                let unreduced = 0;
+                const fullDate = day + month + year;
+                for (let digit of fullDate) {
+                    unreduced += parseInt(digit);
+                }
+                
+                // 3. Mind Plane Number
+                // Just the day part as a number
+                const mindplane = parseInt(day);
+                
+                // Create display text with labeled sections
+                let displayText = `<div style="display: flex; gap: 30px; justify-content: center; align-items: center;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 0.75rem; color: rgba(255,255,255,0.9); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Levenspad</div>
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <span id="reduced" style="font-size: 1.8rem; font-weight: bold; color: #FF944E;">${reduced}</span>
+                            <span style="font-size: 1.2rem; color: rgba(255,255,255,0.3);">•</span>
+                            <span id="unreduced" style="font-size: 1.8rem; font-weight: bold; color: #5D3A9B;">${unreduced}</span>
+                        </div>
+                    </div>
+                    <span style="font-size: 1.5rem; color: rgba(255,255,255,0.2);">|</span>
+                    <div style="text-align: center;">
+                        <div style="font-size: 0.75rem; color: rgba(255,255,255,0.9); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Mindplane</div>
+                        <span id="mindplane" style="font-size: 1.8rem; font-weight: bold; color: #fff;">${mindplane}</span>
+                    </div>
+                </div>`;
+                
+                // Update preview with HTML
+                const previewEl = document.querySelector('.preview-number');
+                previewEl.innerHTML = displayText;
+                previewEl.style.animation = 'pulse 0.5s ease';
+                
+                // Also show the result display
+                const resultDiv = document.getElementById('result');
+                const lifePathDiv = document.getElementById('lifePathNumber');
+                lifePathDiv.textContent = reduced;
+                resultDiv.classList.add('show');
+            } else {
+                // Show default structure with question marks
+                const previewEl = document.querySelector('.preview-number');
+                previewEl.innerHTML = `<div style="display: flex; gap: 30px; justify-content: center; align-items: center;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 0.75rem; color: rgba(255,255,255,0.9); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Levenspad</div>
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <span style="font-size: 1.8rem; font-weight: bold; color: #FF944E;">?</span>
+                            <span style="font-size: 1.2rem; color: rgba(255,255,255,0.3);">•</span>
+                            <span style="font-size: 1.8rem; font-weight: bold; color: #5D3A9B;">?</span>
+                        </div>
+                    </div>
+                    <span style="font-size: 1.5rem; color: rgba(255,255,255,0.2);">|</span>
+                    <div style="text-align: center;">
+                        <div style="font-size: 0.75rem; color: rgba(255,255,255,0.9); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Mindplane</div>
+                        <span style="font-size: 1.8rem; font-weight: bold; color: #fff;">?</span>
+                    </div>
+                </div>`;
+            }
+        }
+        
+        // Add event listeners to date inputs
+        document.querySelectorAll('.date-input').forEach(input => {
+            input.addEventListener('input', calculateLifePath);
+            
+            // Enforce max value on input
+            input.addEventListener('input', function() {
+                const max = parseInt(this.getAttribute('max'));
+                const min = parseInt(this.getAttribute('min'));
+                let value = parseInt(this.value);
+                
+                // Special handling for year input - allow typing freely
+                if (this.classList.contains('year')) {
+                    // Only validate when the input is complete (4 digits)
+                    if (this.value.length === 4) {
+                        if (value > max) {
+                            this.value = max;
+                        } else if (value < min) {
+                            this.value = min;
+                        }
+                    }
+                } else {
+                    // Normal validation for day and month
+                    if (value > max) {
+                        this.value = max;
+                    } else if (value < min && this.value !== '') {
+                        this.value = min;
+                    }
+                }
+                
+                // Auto-focus next input
+                if (this.value.length === parseInt(this.getAttribute('maxlength'))) {
+                    const allInputs = Array.from(document.querySelectorAll('.date-input'));
+                    const currentIndex = allInputs.indexOf(this);
+                    if (currentIndex < allInputs.length - 1) {
+                        allInputs[currentIndex + 1].focus();
+                    }
+                }
+            });
+            
+            // Prevent typing invalid characters
+            input.addEventListener('keydown', function(e) {
+                // Allow backspace, delete, tab, escape, enter
+                if ([8, 9, 27, 13, 46].indexOf(e.keyCode) !== -1 ||
+                    // Allow Ctrl+A, Ctrl+C, Ctrl+V, Ctrl+X
+                    (e.keyCode === 65 && e.ctrlKey === true) ||
+                    (e.keyCode === 67 && e.ctrlKey === true) ||
+                    (e.keyCode === 86 && e.ctrlKey === true) ||
+                    (e.keyCode === 88 && e.ctrlKey === true)) {
+                    return;
+                }
+                // Ensure that it is a number and stop the keypress
+                if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                    e.preventDefault();
+                }
+            });
+        });
+
+        // Countdown Timer
+        function updateCountdown() {
+            const countdownEl = document.getElementById('countdown');
+            let hours = 0;
+            let minutes = 14;
+            let seconds = 59;
+            
+            setInterval(() => {
+                seconds--;
+                if (seconds < 0) {
+                    seconds = 59;
+                    minutes--;
+                    if (minutes < 0) {
+                        minutes = 59;
+                        hours--;
+                        if (hours < 0) {
+                            hours = 23;
+                        }
+                    }
+                }
+                
+                countdownEl.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }, 1000);
+        }
+
+        // Start countdown on page load
+        window.addEventListener('load', updateCountdown);
+        
+        // Scroll to video function
+        function scrollToVideo() {
+            const videoSection = document.querySelector('.video-section');
+            videoSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    </script>
+</body>
+</html>

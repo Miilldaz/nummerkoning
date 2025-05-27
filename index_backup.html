@@ -1,0 +1,5643 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ontdek je Levensmissie door Numerologie - Robbin de Nummerkoning</title>
+    <style>
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #5D3A9B;
+    --color-primary-dark: #4A2E7D;
+    --color-primary-light: #7B5CAD;
+    --color-secondary: #FF944E;
+    --color-secondary-dark: #E67A35;
+    --color-secondary-light: #FFB380;
+    --color-accent: #FF944E;
+    --color-text: #000000;
+    --color-text-light: #4A4A4A;
+    --color-background: #FFFFFF;
+    --color-gray-light: #F9F8FC;
+    --color-gray-medium: #F3F1F7;
+    --color-border: #E8E5EE;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-serif: 'Playfair Display', serif;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    line-height: 1.6;
+    background-color: var(--color-background);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* Remove number input spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Hero Section - Numerology Theme */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+    background: #0a0a0f;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+/* Cosmic Starry Background */
+.cosmic-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.stars, .stars2, .stars3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+.stars {
+    background-image: radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+                      radial-gradient(2px 2px at 40px 70px, #fff, transparent),
+                      radial-gradient(1px 1px at 50px 160px, #fff, transparent),
+                      radial-gradient(1px 1px at 130px 40px, #fff, transparent);
+    background-size: 200px 200px;
+    animation: starsAnimation 120s linear infinite;
+}
+
+.stars2 {
+    background-image: radial-gradient(1px 1px at 150px 150px, #fff, transparent),
+                      radial-gradient(1px 1px at 60px 170px, #fff, transparent),
+                      radial-gradient(1px 1px at 180px 10px, #fff, transparent);
+    background-size: 200px 200px;
+    animation: starsAnimation 240s linear infinite;
+}
+
+.stars3 {
+    background-image: radial-gradient(1px 1px at 90px 90px, rgba(255, 148, 78, 0.8), transparent),
+                      radial-gradient(1px 1px at 130px 160px, rgba(93, 58, 155, 0.8), transparent);
+    background-size: 200px 200px;
+    animation: starsAnimation 360s linear infinite;
+}
+
+@keyframes starsAnimation {
+    from { transform: translateY(0); }
+    to { transform: translateY(-200px); }
+}
+
+/* Sacred Geometry */
+.sacred-geometry {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    pointer-events: none;
+}
+
+.metatron-cube {
+    width: 100%;
+    height: 100%;
+    color: var(--color-primary);
+    animation: rotateSlowly 120s linear infinite;
+}
+
+@keyframes rotateSlowly {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Floating Life Path Numbers */
+.numerology-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.life-path-circle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(93, 58, 155, 0.3), transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: floatOrbit 30s infinite ease-in-out;
+}
+
+.life-path-circle span {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.life-path-circle .orbit {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 148, 78, 0.3);
+    border-radius: 50%;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.life-path-circle:nth-child(1) { top: 15%; left: 10%; animation-delay: 0s; }
+.life-path-circle:nth-child(2) { top: 20%; right: 15%; animation-delay: 1s; }
+.life-path-circle:nth-child(3) { bottom: 30%; left: 15%; animation-delay: 2s; }
+.life-path-circle:nth-child(4) { bottom: 20%; right: 20%; animation-delay: 3s; }
+.life-path-circle:nth-child(5) { top: 50%; left: 80%; animation-delay: 4s; }
+
+@keyframes floatOrbit {
+    0%, 100% { transform: translateY(0) scale(1); }
+    25% { transform: translateY(-30px) scale(1.1); }
+    50% { transform: translateY(0) scale(1); }
+    75% { transform: translateY(30px) scale(0.9); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.5; }
+}
+
+/* Zodiac Wheel */
+.zodiac-wheel {
+    position: absolute;
+    top: 50%;
+    right: -200px;
+    transform: translateY(-50%);
+    width: 500px;
+    height: 500px;
+    pointer-events: none;
+}
+
+.rotating-zodiac {
+    width: 100%;
+    height: 100%;
+    animation: rotateSlowly 240s linear infinite reverse;
+}
+
+/* Content Styling */
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+/* Mystical Badge */
+.mystical-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-secondary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.badge-stars {
+    color: var(--color-primary);
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Hero Title */
+.hero-title {
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.title-small {
+    display: block;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.title-main {
+    display: block;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-family: var(--font-serif);
+    line-height: 1.3;
+    padding-bottom: 5px;
+}
+
+.gradient-text {
+    color: white !important;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3), 0 4px 20px rgba(93, 58, 155, 0.3);
+    font-weight: 700;
+}
+
+/* Birth Date Preview Interactive */
+.birth-date-preview {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 148, 78, 0.3);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 30px;
+    animation: fadeInUp 1.2s ease-out;
+    position: relative;
+    box-shadow: 0 0 30px rgba(255, 148, 78, 0.1);
+    transition: all 0.3s ease;
+}
+
+.birth-date-preview:hover {
+    border-color: rgba(255, 148, 78, 0.5);
+    box-shadow: 0 0 40px rgba(255, 148, 78, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.calculator-header {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.calculator-title {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    margin-bottom: 5px;
+}
+
+.calculator-subtitle {
+    display: block;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+}
+
+.date-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    justify-content: flex-start;
+}
+
+.date-input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 148, 78, 0.3);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.date-input:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    background: rgba(255, 148, 78, 0.1);
+    box-shadow: 0 0 20px rgba(255, 148, 78, 0.3);
+}
+
+.date-input.day, .date-input.month { width: 60px; }
+.date-input.year { width: 100px; }
+
+.date-separator {
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.life-path-preview {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.preview-label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.preview-number {
+    font-weight: 900;
+    color: var(--color-secondary);
+    text-shadow: 0 0 20px rgba(255, 148, 78, 0.5);
+    line-height: 1.2;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hero Subtitle */
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+    animation: fadeInUp 1.4s ease-out;
+}
+
+.hero-subtitle strong {
+    color: var(--color-secondary);
+}
+
+/* Cosmic Button */
+.btn-cosmic {
+    display: inline-block;
+    position: relative;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.btn-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.btn-cosmic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    z-index: 2;
+    transition: left 0.5s ease;
+}
+
+.btn-cosmic:hover::before {
+    left: 100%;
+}
+
+.btn-text {
+    position: relative;
+    z-index: 3;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-icon {
+    font-size: 1.5rem;
+}
+
+.btn-cosmic:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 148, 78, 0.4);
+}
+
+/* Price Info */
+.price-info {
+    text-align: left;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.price-amount {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--color-secondary);
+}
+
+.price-desc {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Trust Indicators */
+.trust-indicators {
+    display: flex;
+    gap: 30px;
+    animation: fadeInUp 1.6s ease-out;
+}
+
+.indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.indicator-icon {
+    font-size: 1.2rem;
+}
+
+/* Numerology Wheel Visual */
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.numerology-wheel {
+    position: relative;
+    width: 450px;
+    height: 450px;
+}
+
+.wheel-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 10;
+    box-shadow: 0 0 50px rgba(93, 58, 155, 0.5);
+}
+
+.wheel-center img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wheel-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.rotating {
+    animation: rotateSlowly 60s linear infinite;
+}
+
+.number-node {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 0 20px rgba(93, 58, 155, 0.5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(calc(40deg * var(--i))) translateY(-200px);
+}
+
+.number-node span {
+    display: inline-block;
+    animation: counterRotate 60s linear infinite;
+}
+
+@keyframes counterRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+/* Fix voor desktop - compenseer initiële rotatie */
+@media (min-width: 769px) {
+    .number-node[style*="--i: 0"] span { 
+        transform: rotate(0deg);
+        animation: counterRotate 60s linear infinite;
+    }
+    .number-node[style*="--i: 1"] span { 
+        transform: rotate(-40deg);
+        animation: counterRotateFrom40 60s linear infinite;
+    }
+    .number-node[style*="--i: 2"] span { 
+        transform: rotate(-80deg);
+        animation: counterRotateFrom80 60s linear infinite;
+    }
+    .number-node[style*="--i: 3"] span { 
+        transform: rotate(-120deg);
+        animation: counterRotateFrom120 60s linear infinite;
+    }
+    .number-node[style*="--i: 4"] span { 
+        transform: rotate(-160deg);
+        animation: counterRotateFrom160 60s linear infinite;
+    }
+    .number-node[style*="--i: 5"] span { 
+        transform: rotate(-200deg);
+        animation: counterRotateFrom200 60s linear infinite;
+    }
+    .number-node[style*="--i: 6"] span { 
+        transform: rotate(-240deg);
+        animation: counterRotateFrom240 60s linear infinite;
+    }
+    .number-node[style*="--i: 7"] span { 
+        transform: rotate(-280deg);
+        animation: counterRotateFrom280 60s linear infinite;
+    }
+    .number-node[style*="--i: 8"] span { 
+        transform: rotate(-320deg);
+        animation: counterRotateFrom320 60s linear infinite;
+    }
+}
+
+@keyframes counterRotateFrom40 {
+    from { transform: rotate(-40deg); }
+    to { transform: rotate(-400deg); }
+}
+
+@keyframes counterRotateFrom80 {
+    from { transform: rotate(-80deg); }
+    to { transform: rotate(-440deg); }
+}
+
+@keyframes counterRotateFrom120 {
+    from { transform: rotate(-120deg); }
+    to { transform: rotate(-480deg); }
+}
+
+@keyframes counterRotateFrom160 {
+    from { transform: rotate(-160deg); }
+    to { transform: rotate(-520deg); }
+}
+
+@keyframes counterRotateFrom200 {
+    from { transform: rotate(-200deg); }
+    to { transform: rotate(-560deg); }
+}
+
+@keyframes counterRotateFrom240 {
+    from { transform: rotate(-240deg); }
+    to { transform: rotate(-600deg); }
+}
+
+@keyframes counterRotateFrom280 {
+    from { transform: rotate(-280deg); }
+    to { transform: rotate(-640deg); }
+}
+
+@keyframes counterRotateFrom320 {
+    from { transform: rotate(-320deg); }
+    to { transform: rotate(-680deg); }
+}
+
+.mystical-aura {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(93, 58, 155, 0.3) 0%, transparent 50%);
+    filter: blur(30px);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Buttons */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.125rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(93, 58, 155, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(93, 58, 155, 0.4);
+}
+
+.btn-arrow {
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover .btn-arrow {
+    transform: translateX(4px);
+}
+
+/* Problem Section - Mystical Theme */
+.problem-section {
+    padding: 200px 0 100px 0;
+    background: #0a0a0f;
+    position: relative;
+    overflow: hidden;
+}
+
+.cosmic-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(93, 58, 155, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(255, 148, 78, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+    animation: cosmicShift 30s ease-in-out infinite;
+}
+
+@keyframes cosmicShift {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.1) rotate(5deg); }
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-badge {
+    display: inline-block;
+    color: var(--color-secondary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(255, 148, 78, 0.5);
+}
+
+.problem-section .section-title {
+    color: white;
+    margin-bottom: 30px;
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.mystical-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.divider-line {
+    display: inline-block;
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-secondary), transparent);
+}
+
+.divider-symbol {
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.problem-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.problem-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+    border-radius: 20px;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+}
+
+.problem-card:hover::before {
+    opacity: 0.3;
+}
+
+.problem-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: transparent;
+}
+
+.card-aura {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, transparent 30%, rgba(93, 58, 155, 0.1) 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.problem-card:hover .card-aura {
+    opacity: 1;
+}
+
+.problem-icon-wrapper {
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.problem-icon {
+    width: 80px;
+    height: 80px;
+    color: var(--color-secondary);
+    animation: float 4s ease-in-out infinite;
+    animation-delay: calc(var(--i, 0) * 0.5s);
+}
+
+.problem-card[data-energy="chaos"] .problem-icon {
+    animation-name: chaosFloat;
+}
+
+.problem-card[data-energy="time"] .problem-icon {
+    animation-name: timeRotate;
+}
+
+.problem-card[data-energy="stuck"] .problem-icon {
+    animation-name: stuckPulse;
+}
+
+@keyframes chaosFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(10deg); }
+    50% { transform: translateY(0) rotate(-10deg); }
+    75% { transform: translateY(10px) rotate(5deg); }
+}
+
+@keyframes timeRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes stuckPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.problem-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: white;
+}
+
+.problem-card p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.energy-indicator {
+    position: relative;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.energy-level {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: calc(var(--level) * 33.33%);
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    animation: energyPulse 2s ease-in-out infinite;
+}
+
+@keyframes energyPulse {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+.problem-revelation {
+    text-align: center;
+    position: relative;
+}
+
+.revelation-content {
+    position: relative;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.revelation-text {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+}
+
+.revelation-text strong {
+    color: var(--color-secondary);
+    text-shadow: 0 0 20px rgba(255, 148, 78, 0.5);
+}
+
+.highlight-text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    text-shadow: 0 0 30px rgba(255, 148, 78, 0.5);
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { text-shadow: 0 0 30px rgba(255, 148, 78, 0.5); }
+    50% { text-shadow: 0 0 40px rgba(255, 148, 78, 0.8); }
+}
+
+.cosmic-pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 148, 78, 0.1) 0%, transparent 70%);
+    animation: cosmicPulse 3s ease-in-out infinite;
+}
+
+@keyframes cosmicPulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+    50% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+}
+
+.revelation-cta {
+    position: relative;
+    display: inline-block;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-glow-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 200%;
+    background: radial-gradient(ellipse at center, rgba(255, 148, 78, 0.15) 0%, transparent 60%);
+    filter: blur(20px);
+    opacity: 0.8;
+    transition: all 0.4s ease;
+}
+
+.revelation-cta:hover .cta-glow-bg {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.cta-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 40px;
+    background: linear-gradient(135deg, rgba(93, 58, 155, 0.1) 0%, rgba(255, 148, 78, 0.1) 100%);
+    border: 1px solid rgba(255, 148, 78, 0.3);
+    border-radius: 60px;
+    transition: all 0.3s ease;
+}
+
+a.cta-content {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.revelation-cta:hover .cta-content {
+    background: linear-gradient(135deg, rgba(93, 58, 155, 0.2) 0%, rgba(255, 148, 78, 0.2) 100%);
+    border-color: rgba(255, 148, 78, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 148, 78, 0.3);
+}
+
+.cta-arrow {
+    font-size: 2rem;
+    color: var(--color-secondary);
+    animation: arrowPulse 2s ease-in-out infinite;
+    text-shadow: 0 0 20px rgba(255, 148, 78, 0.8);
+}
+
+@keyframes arrowPulse {
+    0%, 100% { 
+        transform: translateY(0) scale(1);
+        text-shadow: 0 0 20px rgba(255, 148, 78, 0.8);
+    }
+    50% { 
+        transform: translateY(5px) scale(1.1);
+        text-shadow: 0 0 30px rgba(255, 148, 78, 1);
+    }
+}
+
+.cta-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.cta-main {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-sub {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+.cta-stars {
+    color: var(--color-primary);
+    font-size: 1rem;
+    animation: starTwinkle 3s ease-in-out infinite;
+}
+
+@keyframes starTwinkle {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+.revelation-cta:hover .cta-main {
+    color: var(--color-secondary);
+    text-shadow: 0 0 10px rgba(255, 148, 78, 0.5);
+}
+
+.revelation-cta:hover .cta-stars {
+    color: var(--color-secondary);
+}
+
+/* About Section - Mystical Theme */
+.about-section {
+    padding: 100px 0;
+    background: #0a0a0f;
+    position: relative;
+    overflow: hidden;
+}
+
+.mystical-bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.constellation-lines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(93, 58, 155, 0.15) 0%, transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(255, 148, 78, 0.15) 0%, transparent 30%),
+        radial-gradient(ellipse at center, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+    animation: constellationShift 40s ease-in-out infinite;
+}
+
+@keyframes constellationShift {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(10deg) scale(1.05); }
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-badge {
+    display: inline-block;
+    color: var(--color-secondary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(255, 148, 78, 0.5);
+}
+
+.about-section .section-title {
+    color: white;
+    margin-bottom: 30px;
+    font-family: var(--font-serif);
+}
+
+.title-line {
+    display: block;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    opacity: 0.8;
+}
+
+.title-accent {
+    display: block;
+    font-size: clamp(2rem, 4vw, 3rem);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(255, 148, 78, 0.3);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+}
+
+.mystical-intro {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.intro-aura {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: radial-gradient(ellipse at center, rgba(93, 58, 155, 0.1) 0%, transparent 60%);
+    filter: blur(20px);
+    z-index: -1;
+}
+
+.lead-text {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+}
+
+.name-highlight {
+    color: var(--color-secondary);
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(255, 148, 78, 0.5);
+}
+
+/* Power Features */
+.power-features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feature-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 25px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent 0%, rgba(93, 58, 155, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+.feature-card:hover {
+    transform: translateX(10px);
+    border-color: rgba(255, 148, 78, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.feature-glow {
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255, 148, 78, 0.3) 0%, transparent 70%);
+    filter: blur(30px);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.feature-card:hover .feature-glow {
+    opacity: 1;
+    left: -20%;
+}
+
+.feature-icon-wrapper {
+    flex-shrink: 0;
+    position: relative;
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    color: var(--color-secondary);
+}
+
+.feature-card[data-power="precision"] .feature-icon {
+    animation: targetPulse 4s ease-in-out infinite;
+}
+
+.feature-card[data-power="speed"] .feature-icon {
+    animation: lightningFlash 3s ease-in-out infinite;
+}
+
+.feature-card[data-power="clarity"] .feature-icon {
+    animation: crystalGlow 4s ease-in-out infinite;
+}
+
+@keyframes targetPulse {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.1) rotate(180deg); }
+}
+
+@keyframes lightningFlash {
+    0%, 100% { opacity: 0.8; transform: translateY(0); }
+    50% { opacity: 1; transform: translateY(-5px); }
+}
+
+@keyframes crystalGlow {
+    0%, 100% { opacity: 0.8; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+}
+
+.feature-content h4 {
+    font-size: 1.25rem;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.feature-content p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 15px;
+}
+
+.power-meter {
+    position: relative;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.power-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: var(--power);
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    box-shadow: 0 0 10px rgba(255, 148, 78, 0.5);
+    animation: powerPulse 2s ease-in-out infinite;
+}
+
+@keyframes powerPulse {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+/* Testimonial Section */
+.about-testimonial {
+    position: relative;
+}
+
+.testimonial-constellation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.constellation-bg {
+    width: 100%;
+    height: 100%;
+    color: var(--color-secondary);
+    opacity: 0.5;
+}
+
+.testimonial-card.cosmic {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 148, 78, 0.3);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 0 40px rgba(93, 58, 155, 0.2);
+    z-index: 1;
+}
+
+.testimonial-card.cosmic::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary), var(--color-primary));
+    border-radius: 20px;
+    opacity: 0.3;
+    z-index: -1;
+    animation: borderRotate 10s linear infinite;
+}
+
+@keyframes borderRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.rating-stars {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.star-icon {
+    width: 24px;
+    height: 24px;
+    color: #FFD700;
+    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+    animation: starFloat 3s ease-in-out infinite;
+    animation-delay: calc(var(--i, 0) * 0.2s);
+}
+
+.star-icon:nth-child(1) { --i: 0; }
+.star-icon:nth-child(2) { --i: 1; }
+.star-icon:nth-child(3) { --i: 2; }
+.star-icon:nth-child(4) { --i: 3; }
+.star-icon:nth-child(5) { --i: 4; }
+
+@keyframes starFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.testimonial-card.cosmic blockquote {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.quote-highlight {
+    color: var(--color-secondary);
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(255, 148, 78, 0.5);
+}
+
+.testimonial-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.testimonial-footer cite {
+    font-style: normal;
+    font-weight: 600;
+    color: #FFFFFF !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    font-size: 1rem;
+}
+
+.testimonial-badge {
+    background: rgba(255, 148, 78, 0.2);
+    color: var(--color-secondary);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255, 148, 78, 0.4);
+    text-shadow: 0 0 10px rgba(255, 148, 78, 0.5);
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    position: relative;
+}
+
+.testimonial-card.featured {
+    border-left: 4px solid var(--color-primary);
+}
+
+.testimonial-card.large {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.stars {
+    color: #FFD700;
+    margin-bottom: 20px;
+}
+
+.testimonial-card blockquote {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: 20px;
+}
+
+.testimonial-card cite {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-text-light);
+}
+
+.quote-icon {
+    font-size: 4rem;
+    color: var(--color-primary);
+    opacity: 0.2;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+}
+
+.testimonial-author {
+    margin-top: 30px;
+}
+
+/* About CTA */
+.about-cta {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.about-cta .cta-glow-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 150px;
+    background: radial-gradient(ellipse at center, rgba(255, 148, 78, 0.2) 0%, transparent 60%);
+    filter: blur(40px);
+    animation: glowPulse 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.about-cta .cta-content {
+    display: inline-flex;
+    background: linear-gradient(135deg, rgba(93, 58, 155, 0.1) 0%, rgba(255, 148, 78, 0.1) 100%);
+    border: 1px solid rgba(255, 148, 78, 0.3);
+}
+
+.about-cta:hover .cta-content {
+    background: linear-gradient(135deg, rgba(93, 58, 155, 0.2) 0%, rgba(255, 148, 78, 0.2) 100%);
+    border-color: rgba(255, 148, 78, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 148, 78, 0.3);
+}
+
+/* Benefits Section - Mystical Portal Theme */
+.benefits-section {
+    padding: 100px 0;
+    background: #0a0a0f;
+    position: relative;
+    overflow: hidden;
+}
+
+.mystical-grid-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.grid-lines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(93, 58, 155, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(93, 58, 155, 0.1) 1px, transparent 1px);
+    background-size: 100px 100px;
+    animation: gridFloat 20s linear infinite;
+}
+
+@keyframes gridFloat {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(100px, 100px); }
+}
+
+.energy-flow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at 30% 40%, rgba(255, 148, 78, 0.1) 0%, transparent 40%),
+                radial-gradient(ellipse at 70% 60%, rgba(93, 58, 155, 0.1) 0%, transparent 40%);
+    animation: energyShift 15s ease-in-out infinite;
+}
+
+@keyframes energyShift {
+    0%, 100% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.2) rotate(180deg); }
+}
+
+.benefits-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.benefits-badge {
+    display: inline-block;
+    color: var(--color-secondary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(255, 148, 78, 0.5);
+}
+
+.benefits-section .section-title {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.title-small {
+    display: block;
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.title-main {
+    display: block;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-family: var(--font-serif);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cosmic-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.separator-line {
+    display: inline-block;
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-secondary), transparent);
+}
+
+.rotating-symbol {
+    width: 50px;
+    height: 50px;
+    animation: rotateStar 10s linear infinite;
+}
+
+.rotating-symbol svg {
+    width: 100%;
+    height: 100%;
+    color: var(--color-secondary);
+}
+
+@keyframes rotateStar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Benefits Grid */
+.benefits-grid.cosmic {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.benefit-portal {
+    position: relative;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px 30px;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.portal-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(93, 58, 155, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.benefit-portal:hover .portal-bg {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.benefit-portal::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+    border-radius: 20px;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+}
+
+.benefit-portal:hover::before {
+    opacity: 0.5;
+}
+
+.benefit-portal:hover {
+    transform: translateY(-10px);
+    border-color: transparent;
+}
+
+.portal-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: 0 0 20px rgba(93, 58, 155, 0.5);
+}
+
+.benefit-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.benefit-icon-wrapper {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.icon-aura {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(255, 148, 78, 0.2) 0%, transparent 60%);
+    filter: blur(30px);
+    animation: auraPulse 4s ease-in-out infinite;
+}
+
+@keyframes auraPulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+    50% { transform: translate(-50%, -50%) scale(1.3); opacity: 0.8; }
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    color: var(--color-secondary);
+    position: relative;
+    z-index: 1;
+}
+
+.benefit-portal[data-element="self"] .benefit-icon {
+    animation: soulFloat 5s ease-in-out infinite;
+}
+
+.benefit-portal[data-element="clarity"] .benefit-icon {
+    animation: crystalSpin 8s linear infinite;
+}
+
+.benefit-portal[data-element="insight"] .benefit-icon {
+    animation: starPulse 3s ease-in-out infinite;
+}
+
+.benefit-portal[data-element="timing"] .benefit-icon {
+    animation: clockTick 4s steps(12) infinite;
+}
+
+@keyframes soulFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-10px) scale(1.1); }
+}
+
+@keyframes crystalSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes starPulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.2); opacity: 1; }
+}
+
+@keyframes clockTick {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.benefit-portal h3 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.benefit-portal p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.energy-bar {
+    position: relative;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.energy-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: var(--progress);
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    box-shadow: 0 0 10px rgba(255, 148, 78, 0.5);
+    animation: fillProgress 2s ease-out forwards, energyGlow 2s ease-in-out infinite;
+}
+
+@keyframes fillProgress {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+@keyframes energyGlow {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; box-shadow: 0 0 15px rgba(255, 148, 78, 0.8); }
+}
+
+/* Benefits Footer */
+.benefits-footer {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.mystical-quote {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 148, 78, 0.3);
+    border-radius: 50px;
+}
+
+.mystical-quote p {
+    color: rgba(255, 255, 255, 0.8);
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.quote-symbol {
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+    animation: symbolFloat 3s ease-in-out infinite;
+}
+
+@keyframes symbolFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Process Section - Mystical Journey Theme */
+.process-section {
+    padding: 100px 0;
+    background: #0a0a0f;
+    position: relative;
+    overflow: hidden;
+}
+
+.cosmic-journey-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.constellation-map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 10% 15%, rgba(255, 148, 78, 0.4), transparent),
+        radial-gradient(2px 2px at 90% 25%, rgba(93, 58, 155, 0.4), transparent),
+        radial-gradient(1px 1px at 50% 50%, rgba(255, 255, 255, 0.3), transparent),
+        radial-gradient(2px 2px at 30% 80%, rgba(93, 58, 155, 0.4), transparent),
+        radial-gradient(2px 2px at 70% 70%, rgba(255, 148, 78, 0.4), transparent);
+    background-size: 300px 300px;
+    animation: constellationDrift 60s linear infinite;
+}
+
+@keyframes constellationDrift {
+    from { transform: translateY(0); }
+    to { transform: translateY(-300px); }
+}
+
+.journey-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center top, rgba(93, 58, 155, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at center bottom, rgba(255, 148, 78, 0.1) 0%, transparent 50%);
+}
+
+.process-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.process-badge {
+    display: inline-block;
+    color: var(--color-secondary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(255, 148, 78, 0.5);
+}
+
+.process-section .section-title {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.title-line {
+    display: block;
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.title-accent {
+    display: block;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-family: var(--font-serif);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cosmic-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-top: 30px;
+}
+
+.divider-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--color-secondary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 148, 78, 0.5);
+}
+
+.divider-line {
+    width: 50px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-secondary), transparent);
+}
+
+/* Mystical Journey */
+.mystical-journey {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.journey-path {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    height: 200px;
+    z-index: 1;
+}
+
+.path-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.journey-line {
+    animation: dashFlow 20s linear infinite;
+}
+
+@keyframes dashFlow {
+    to { stroke-dashoffset: -100; }
+}
+
+.energy-flow-line {
+    position: absolute;
+    top: 98px;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--color-secondary), transparent);
+    box-shadow: 0 0 20px rgba(255, 148, 78, 0.8);
+    animation: energyTravel 8s linear infinite;
+}
+
+@keyframes energyTravel {
+    from { left: -100px; }
+    to { left: 100%; }
+}
+
+.journey-steps {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    position: relative;
+    z-index: 2;
+    padding: 50px 0;
+}
+
+.journey-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.step-portal {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 30px;
+}
+
+.portal-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(93, 58, 155, 0.3) 0%, transparent 60%);
+    filter: blur(20px);
+    animation: portalPulse 4s ease-in-out infinite;
+}
+
+.journey-step[data-step="2"] .portal-glow {
+    background: radial-gradient(circle, rgba(255, 148, 78, 0.3) 0%, transparent 60%);
+    animation-delay: 1.3s;
+}
+
+.journey-step[data-step="3"] .portal-glow {
+    background: radial-gradient(circle, rgba(93, 58, 155, 0.3) 0%, transparent 60%);
+    animation-delay: 2.6s;
+}
+
+@keyframes portalPulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+    50% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+}
+
+.portal-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(255, 148, 78, 0.3);
+    border-radius: 50%;
+    animation: ringRotate 10s linear infinite;
+}
+
+@keyframes ringRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.step-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 30px rgba(93, 58, 155, 0.5);
+    z-index: 2;
+}
+
+.number-text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.number-aura {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.content-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px 25px;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.journey-step:hover .content-card {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 148, 78, 0.5);
+    box-shadow: 0 10px 30px rgba(255, 148, 78, 0.2);
+}
+
+.card-shimmer {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    transform: rotate(45deg);
+    animation: shimmer 3s infinite;
+    opacity: 0;
+}
+
+.journey-step:hover .card-shimmer {
+    opacity: 1;
+}
+
+@keyframes shimmer {
+    0% { transform: rotate(45deg) translateY(-100%); }
+    100% { transform: rotate(45deg) translateY(100%); }
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    color: var(--color-secondary);
+}
+
+.step-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.journey-step[data-step="1"] .step-icon {
+    animation: stepFloat 4s ease-in-out infinite;
+}
+
+.journey-step[data-step="2"] .step-icon {
+    animation: stepRotate 6s linear infinite;
+}
+
+.journey-step[data-step="3"] .step-icon {
+    animation: stepPulse 3s ease-in-out infinite;
+}
+
+@keyframes stepFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes stepRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes stepPulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+
+.content-card h3 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3);
+    font-weight: 700;
+}
+
+.content-card p {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+/* Journey Completion */
+.journey-completion {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.completion-symbol {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    animation: completionGlow 4s ease-in-out infinite;
+}
+
+.completion-symbol svg {
+    width: 100%;
+    height: 100%;
+    color: var(--color-secondary);
+}
+
+@keyframes completionGlow {
+    0%, 100% { filter: drop-shadow(0 0 10px rgba(255, 148, 78, 0.5)); }
+    50% { filter: drop-shadow(0 0 20px rgba(255, 148, 78, 0.8)); }
+}
+
+.completion-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+/* Journey CTA */
+.journey-cta {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.journey-cta .cta-glow-bg {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 150px;
+    background: radial-gradient(ellipse at center, rgba(255, 148, 78, 0.2) 0%, transparent 60%);
+    filter: blur(40px);
+    animation: glowPulse 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.journey-cta .cta-content {
+    display: inline-flex;
+}
+
+.journey-cta .cta-urgency {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.urgency-timer {
+    color: var(--color-secondary);
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(255, 148, 78, 0.5);
+}
+
+.btn-journey {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    text-decoration: none;
+    border-radius: 60px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-glow {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary), var(--color-primary));
+    border-radius: 60px;
+    opacity: 0.8;
+    z-index: -1;
+    animation: glowRotate 3s linear infinite;
+}
+
+@keyframes glowRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.btn-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 40px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-journey:hover .btn-content {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.btn-text {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-arrow {
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-journey:hover .btn-arrow {
+    transform: translateX(5px);
+}
+
+.btn-journey:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 40px rgba(255, 148, 78, 0.3);
+}
+
+.cta-urgency {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.urgency-timer {
+    color: var(--color-secondary);
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(255, 148, 78, 0.5);
+}
+
+/* Testimonial Section */
+/* Testimonial Section - Mystical Theme */
+.testimonial-section {
+    padding: 100px 0;
+    background: #0a0a0f;
+    position: relative;
+    overflow: hidden;
+}
+
+.cosmic-testimonial-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.constellation-pattern {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20% 30%, rgba(255, 148, 78, 0.3) 0%, transparent 50%),
+        radial-gradient(2px 2px at 60% 70%, rgba(93, 58, 155, 0.3) 0%, transparent 50%),
+        radial-gradient(1px 1px at 90% 10%, white 0%, transparent 50%);
+    background-size: 200px 200px, 300px 300px, 250px 250px;
+    animation: constellationMove 40s linear infinite;
+}
+
+@keyframes constellationMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-200px, -200px); }
+}
+
+.cosmic-dust {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.5)"/><circle cx="150" cy="150" r="1" fill="rgba(255,255,255,0.3)"/><circle cx="180" cy="80" r="1" fill="rgba(255,255,255,0.4)"/><circle cx="20" cy="170" r="1" fill="rgba(255,255,255,0.6)"/></svg>');
+    opacity: 0.5;
+    animation: dustFloat 30s linear infinite;
+}
+
+@keyframes dustFloat {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-100px) rotate(360deg); }
+}
+
+.energy-waves {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at 20% 50%, rgba(255, 148, 78, 0.05) 0%, transparent 40%),
+                radial-gradient(ellipse at 80% 50%, rgba(93, 58, 155, 0.05) 0%, transparent 40%);
+    animation: energyPulse 8s ease-in-out infinite;
+}
+
+@keyframes energyPulse {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+.testimonial-section .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-section .section-badge {
+    display: inline-block;
+    color: var(--color-secondary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(255, 148, 78, 0.5);
+}
+
+.testimonial-title {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.testimonial-title .title-line {
+    display: block;
+    font-size: 1.5rem;
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
+
+.testimonial-title .title-highlight {
+    display: block;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-family: var(--font-serif);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.testimonial-stars-decoration {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.star-constellation {
+    color: var(--color-secondary);
+}
+
+.star-twinkle {
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Testimonials Grid */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-card.mystical {
+    position: relative;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px 35px;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.testimonial-card.mystical:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 148, 78, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 148, 78, 0.1);
+}
+
+.testimonial-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 148, 78, 0.1) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.testimonial-card.mystical:hover .testimonial-glow {
+    opacity: 1;
+}
+
+.testimonial-card.featured {
+    grid-column: span 2;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 148, 78, 0.3);
+    padding-top: 60px;
+}
+
+.featured-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    padding: 6px 16px;
+    border-radius: 15px;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(255, 148, 78, 0.3);
+}
+
+.featured-badge span {
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.testimonial-content {
+    position: relative;
+    z-index: 1;
+}
+
+.quote-symbol {
+    margin-bottom: 20px;
+}
+
+.quote-symbol svg {
+    color: var(--color-secondary);
+}
+
+.testimonial-card.mystical blockquote {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.testimonial-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.author-avatar {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-glow {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: radial-gradient(circle, rgba(255, 148, 78, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: avatarPulse 3s ease-in-out infinite;
+}
+
+@keyframes avatarPulse {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+.avatar-initial {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.author-info cite {
+    display: block;
+    color: white;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.author-title {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+}
+
+.rating-stars {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    margin-top: 10px;
+}
+
+.star-group {
+    animation: starsGlow 4s ease-in-out infinite;
+}
+
+.star-group path {
+    fill: #FF944E !important;
+}
+
+@keyframes starsGlow {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.2) drop-shadow(0 0 10px rgba(255, 148, 78, 0.5)); }
+}
+
+/* Navigation Dots */
+.testimonial-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.nav-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-dot:hover {
+    background: rgba(255, 148, 78, 0.3);
+    border-color: rgba(255, 148, 78, 0.5);
+}
+
+.nav-dot.active {
+    background: var(--color-secondary);
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 20px rgba(255, 148, 78, 0.5);
+}
+
+/* Testimonial CTA */
+.testimonial-cta {
+    margin-top: 60px;
+    text-align: center;
+    position: relative;
+    padding: 45px 40px 50px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cta-cosmic-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center top, rgba(255, 148, 78, 0.06) 0%, transparent 50%);
+    animation: ctaPulse 10s ease-in-out infinite;
+}
+
+@keyframes ctaPulse {
+    0%, 100% { transform: scale(1); opacity: 0.4; }
+    50% { transform: scale(1.03); opacity: 0.7; }
+}
+
+.testimonial-cta .cta-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-subtitle {
+    color: var(--color-secondary);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    opacity: 0.95;
+    text-shadow: 0 0 15px rgba(255, 148, 78, 0.4);
+}
+
+.cta-title {
+    color: white;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    font-family: var(--font-serif);
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    max-width: 450px;
+}
+
+.btn-testimonial {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 35px;
+    background: linear-gradient(135deg, rgba(93, 58, 155, 0.3) 0%, rgba(255, 148, 78, 0.3) 100%);
+    border: 2px solid rgba(255, 148, 78, 0.6);
+    border-radius: 60px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+    margin-top: 5px;
+    box-shadow: 0 0 30px rgba(255, 148, 78, 0.4);
+}
+
+.btn-testimonial:hover {
+    background: linear-gradient(135deg, rgba(93, 58, 155, 0.5) 0%, rgba(255, 148, 78, 0.5) 100%);
+    border-color: rgba(255, 148, 78, 0.9);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(255, 148, 78, 0.5);
+}
+
+.btn-testimonial .btn-glow {
+    display: none;
+}
+
+.btn-testimonial .btn-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-testimonial .btn-icon {
+    font-size: 1.4rem;
+    color: #FFB380;
+    text-shadow: 0 0 25px rgba(255, 148, 78, 1);
+    animation: sparkle 3s ease-in-out infinite;
+}
+
+.btn-testimonial .btn-text {
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-testimonial .btn-arrow {
+    font-size: 1.6rem;
+    color: #FFB380;
+    animation: arrowPulse 2s ease-in-out infinite;
+    text-shadow: 0 0 30px rgba(255, 148, 78, 1);
+}
+
+.btn-testimonial:hover .btn-arrow {
+    transform: translateX(5px);
+}
+
+@keyframes sparkle {
+    0%, 100% { 
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    50% { 
+        transform: scale(1.2) rotate(180deg);
+        opacity: 0.8;
+    }
+}
+
+.cta-note {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+    margin-top: 0;
+    font-style: normal;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-card.featured {
+        grid-column: span 1;
+    }
+    
+    .testimonial-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .testimonial-cta {
+        padding: 40px 20px;
+    }
+    
+    .btn-testimonial {
+        font-size: 1rem;
+        padding: 16px 30px;
+    }
+}
+
+/* Offer Section - Mystical Light Theme */
+.offer-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #faf8f5 0%, #f5f0e8 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.mystical-offer-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.sacred-geometry-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 80%, rgba(93, 58, 155, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 148, 78, 0.05) 0%, transparent 50%);
+    opacity: 0.5;
+}
+
+.energy-field {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(45deg, transparent 48%, rgba(93, 58, 155, 0.02) 50%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, rgba(255, 148, 78, 0.02) 50%, transparent 52%);
+    background-size: 100px 100px;
+    animation: energyFlow 20s linear infinite;
+}
+
+@keyframes energyFlow {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(100px, 100px); }
+}
+
+.floating-stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 10% 20%, rgba(255, 148, 78, 0.3) 0%, transparent 50%),
+        radial-gradient(1px 1px at 30% 60%, rgba(93, 58, 155, 0.3) 0%, transparent 50%),
+        radial-gradient(2px 2px at 70% 40%, rgba(255, 148, 78, 0.3) 0%, transparent 50%),
+        radial-gradient(1px 1px at 90% 80%, rgba(93, 58, 155, 0.3) 0%, transparent 50%);
+    background-size: 400px 400px;
+    animation: starsFloat 30s ease-in-out infinite;
+}
+
+@keyframes starsFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-30px) scale(1.1); }
+}
+
+.offer-portal {
+    position: relative;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    padding: 50px 40px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 
+        0 20px 40px rgba(93, 58, 155, 0.1),
+        0 0 60px rgba(255, 148, 78, 0.05),
+        inset 0 0 80px rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+}
+
+.portal-glow-effect {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255, 148, 78, 0.1) 0%, transparent 40%);
+    animation: portalGlow 8s ease-in-out infinite;
+}
+
+@keyframes portalGlow {
+    0%, 100% { transform: rotate(0deg) scale(1); opacity: 0.5; }
+    50% { transform: rotate(180deg) scale(1.2); opacity: 1; }
+}
+
+.portal-border {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary), var(--color-primary));
+    border-radius: 40px;
+    opacity: 0.3;
+    z-index: -1;
+    animation: borderRotate 10s linear infinite;
+}
+
+@keyframes borderRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.offer-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.offer-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: white;
+    padding: 6px 20px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(93, 58, 155, 0.3);
+}
+
+.offer-title {
+    margin-bottom: 30px;
+}
+
+.offer-title .title-small {
+    display: block;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.offer-title .title-main {
+    display: block;
+    font-size: clamp(2rem, 3.5vw, 2.5rem);
+    font-family: var(--font-serif);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Cosmic Timer */
+.cosmic-timer {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.timer-aura {
+    position: absolute;
+    top: -20px;
+    left: -40px;
+    right: -40px;
+    bottom: -20px;
+    background: radial-gradient(ellipse at center, rgba(255, 148, 78, 0.2) 0%, transparent 60%);
+    filter: blur(20px);
+    animation: timerPulse 3s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes timerPulse {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+.timer-content {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, rgba(93, 58, 155, 0.9) 0%, rgba(255, 148, 78, 0.9) 100%);
+    padding: 12px 20px;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(93, 58, 155, 0.3);
+}
+
+.timer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.timer-label {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.timer-separator {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.separator-dot {
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    animation: dotPulse 1s ease-in-out infinite;
+}
+
+.separator-dot:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+@keyframes dotPulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.5); }
+}
+
+.timer-text {
+    margin-bottom: 10px;
+    font-size: 0.875rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    text-align: center;
+}
+
+/* Price Portal */
+.price-portal {
+    position: relative;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.price-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(93, 58, 155, 0.08) 0%, transparent 60%);
+    filter: blur(30px);
+    animation: priceGlow 4s ease-in-out infinite;
+}
+
+@keyframes priceGlow {
+    0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
+}
+
+.price-content {
+    position: relative;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(250, 248, 245, 0.8) 100%);
+    border: 2px solid rgba(93, 58, 155, 0.1);
+    border-radius: 20px;
+    padding: 25px 30px;
+    backdrop-filter: blur(10px);
+}
+
+.price-label {
+    font-size: 0.875rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+.price-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    margin-bottom: 10px;
+}
+
+.price-currency {
+    font-size: 2rem;
+    font-weight: 500;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.price-amount {
+    font-size: 3.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+.price-subtitle {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.price-stars {
+    display: flex;
+    justify-content: center;
+}
+
+/* Bonus Portal */
+.bonus-portal {
+    position: relative;
+    margin-bottom: 35px;
+    background: linear-gradient(135deg, rgba(255, 148, 78, 0.05) 0%, rgba(93, 58, 155, 0.05) 100%);
+    border: 2px solid rgba(255, 148, 78, 0.2);
+    border-radius: 20px;
+    padding: 25px 30px;
+    overflow: hidden;
+}
+
+.bonus-aura {
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 148, 78, 0.08) 0%, transparent 50%);
+    animation: bonusFloat 15s ease-in-out infinite;
+}
+
+@keyframes bonusFloat {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-50px, 50px) rotate(180deg); }
+}
+
+.bonus-badge-mystical {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.bonus-badge-mystical svg {
+    width: 25px;
+    height: 25px;
+    animation: starRotate 10s linear infinite;
+}
+
+@keyframes starRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.bonus-badge-mystical span {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.bonus-portal h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.bonus-item.mystical {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.bonus-icon {
+    flex-shrink: 0;
+    animation: iconFloat 4s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.bonus-details strong {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.bonus-title {
+    font-size: 0.875rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.bonus-value {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.value-label {
+    font-size: 0.875rem;
+    color: #888;
+}
+
+.value-amount {
+    font-weight: 600;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.value-free {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* CTA Button */
+.cta-cosmic {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.btn-offer-mystical {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: white;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.125rem;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(93, 58, 155, 0.3);
+    overflow: hidden;
+}
+
+.btn-offer-mystical:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(93, 58, 155, 0.4);
+}
+
+.btn-aura {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.btn-offer-mystical:hover .btn-aura {
+    opacity: 1;
+}
+
+.btn-stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(2px 2px at 20% 30%, white 0%, transparent 50%),
+        radial-gradient(2px 2px at 80% 70%, white 0%, transparent 50%),
+        radial-gradient(1px 1px at 60% 40%, white 0%, transparent 50%);
+    background-size: 100px 100px;
+    opacity: 0;
+    animation: starsAppear 0.6s ease-out forwards;
+}
+
+.btn-offer-mystical:hover .btn-stars {
+    animation: starsTwinkle 2s ease-in-out infinite;
+}
+
+@keyframes starsAppear {
+    from { opacity: 0; transform: scale(0); }
+    to { opacity: 0.3; transform: scale(1); }
+}
+
+@keyframes starsTwinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+}
+
+.btn-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.btn-main {
+    font-size: 1.125rem;
+}
+
+.btn-sub {
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+
+/* Guarantee */
+.guarantee-mystical {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.guarantee-seal {
+    position: relative;
+    animation: sealFloat 6s ease-in-out infinite;
+}
+
+.guarantee-seal svg {
+    width: 60px;
+    height: 60px;
+}
+
+@keyframes sealFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+.guarantee-text {
+    text-align: left;
+}
+
+.guarantee-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 5px;
+}
+
+.guarantee-subtitle {
+    color: #666;
+    font-size: 0.875rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .offer-portal {
+        padding: 40px 20px;
+    }
+    
+    .price-amount {
+        font-size: 3.5rem;
+    }
+    
+    .btn-offer-mystical {
+        padding: 20px 40px;
+        font-size: 1.125rem;
+    }
+    
+    .guarantee-mystical {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .guarantee-text {
+        text-align: center;
+    }
+}
+    overflow: hidden;
+}
+
+.btn-cta:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 32px rgba(255, 148, 78, 0.5);
+}
+
+.btn-subtitle {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-top: 4px;
+}
+
+.guarantee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--color-text-light);
+}
+
+.guarantee svg {
+    color: #FFD700;
+}
+
+/* Final CTA Section - Subtle Mystical Theme */
+.final-cta {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.subtle-cosmic-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.final-stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(1px 1px at 10% 20%, rgba(93, 58, 155, 0.2) 0%, transparent 50%),
+        radial-gradient(1px 1px at 30% 70%, rgba(255, 148, 78, 0.2) 0%, transparent 50%),
+        radial-gradient(1px 1px at 80% 40%, rgba(93, 58, 155, 0.2) 0%, transparent 50%);
+    background-size: 500px 500px;
+    opacity: 0.5;
+    animation: subtleFloat 40s ease-in-out infinite;
+}
+
+@keyframes subtleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.final-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cosmic-divider-top,
+.cosmic-divider-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.divider-star {
+    color: var(--color-secondary);
+    font-size: 1.25rem;
+    animation: starGlow 3s ease-in-out infinite;
+}
+
+@keyframes starGlow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.divider-line {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-secondary), transparent);
+}
+
+.final-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.final-cta .subtitle {
+    font-size: 1.75rem;
+    margin-bottom: 40px;
+}
+
+.subtitle.gradient-text {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+}
+
+.final-quote-wrapper {
+    display: flex;
+    align-items: stretch;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto 50px;
+}
+
+.robbin-image-final {
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: stretch;
+}
+
+.robbin-image-final img {
+    width: 250px;
+    height: 100%;
+    min-height: 250px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 3px solid rgba(93, 58, 155, 0.3);
+    box-shadow: 0 10px 30px rgba(93, 58, 155, 0.2);
+}
+
+.robbin-image-final .image-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(93, 58, 155, 0.2) 0%, transparent 60%);
+    filter: blur(20px);
+    z-index: -1;
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+    .final-quote-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .robbin-image-final img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        min-height: 200px;
+    }
+}
+
+.final-quote.mystical {
+    position: relative;
+    flex: 1;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    border: 1px solid rgba(93, 58, 155, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.quote-mark {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 4rem;
+    color: var(--color-secondary);
+    opacity: 0.2;
+    font-family: var(--font-serif);
+}
+
+.quote-text {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.quote-text .highlight {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.final-quote cite {
+    display: block;
+    font-style: normal;
+    font-weight: 600;
+    color: #666;
+    font-size: 1rem;
+}
+
+.btn-final-mystical {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: white;
+    padding: 20px 50px;
+    border-radius: 60px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.25rem;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(93, 58, 155, 0.3);
+    overflow: hidden;
+}
+
+.btn-final-mystical:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(93, 58, 155, 0.4);
+}
+
+.btn-final-mystical .btn-glow {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s;
+}
+
+.btn-final-mystical:hover .btn-glow {
+    left: 100%;
+}
+
+.btn-final-mystical .btn-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-final-mystical .btn-arrow {
+    transition: transform 0.3s ease;
+}
+
+.btn-final-mystical:hover .btn-arrow {
+    transform: translateX(5px);
+}
+
+/* Additional Brand Enhancements */
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.btn-cta:hover::before {
+    left: 100%;
+}
+
+/* Brand accent for testimonials */
+.testimonial-card.featured {
+    border-left-color: var(--color-secondary);
+}
+
+.testimonial-card.large {
+    border-top: 3px solid var(--color-primary);
+}
+
+/* Footer */
+.footer {
+    padding: 40px 0;
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+.footer-note {
+    margin-top: 16px;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Hero Section Mobile */
+    .hero {
+        padding: 40px 0;
+    }
+    
+    .hero .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .hero-visual {
+        order: -1;
+        margin-bottom: 20px;
+    }
+    
+    .numerology-wheel {
+        width: 320px;
+        height: 320px;
+    }
+    
+    .wheel-center {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .number-node {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        transform: translate(-50%, -50%) rotate(calc(40deg * var(--i))) translateY(-140px) rotate(calc(-40deg * var(--i)));
+    }
+    
+    .mystical-badge {
+        font-size: 0.75rem;
+        justify-content: center;
+    }
+    
+    .title-small {
+        font-size: 1rem;
+    }
+    
+    .title-main {
+        font-size: 2rem;
+    }
+    
+    .birth-date-preview {
+        padding: 15px;
+    }
+    
+    .calculator-header {
+        text-align: center;
+    }
+    
+    .date-input-group {
+        justify-content: center;
+    }
+    
+    .life-path-preview {
+        justify-content: center;
+    }
+    
+    .date-input {
+        font-size: 1rem;
+        padding: 8px;
+    }
+    
+    .date-input.day, .date-input.month { width: 50px; }
+    .date-input.year { width: 80px; }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .btn-cosmic {
+        padding: 16px 30px;
+    }
+    
+    .btn-text {
+        font-size: 1rem;
+    }
+    
+    .price-info {
+        justify-content: center;
+    }
+    
+    .price-amount {
+        font-size: 1.5rem;
+    }
+    
+    .trust-indicators {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .indicator {
+        font-size: 0.8rem;
+    }
+    
+    /* Hide some background elements on mobile */
+    .sacred-geometry,
+    .zodiac-wheel {
+        display: none;
+    }
+    
+    .life-path-circle {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .life-path-circle span {
+        font-size: 1rem;
+    }
+    
+    /* Other sections */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .offer-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .process-steps {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .process-line {
+        display: none;
+    }
+    
+    .offer-card {
+        padding: 40px 20px;
+    }
+    
+    .price {
+        font-size: 3rem;
+    }
+    
+    /* Problem Section Mobile */
+    .revelation-cta {
+        margin-top: 30px;
+    }
+    
+    .cta-content {
+        padding: 15px 25px;
+        gap: 12px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cta-arrow {
+        font-size: 1.5rem;
+    }
+    
+    .cta-main {
+        font-size: 1rem;
+    }
+    
+    .cta-sub {
+        font-size: 0.75rem;
+    }
+    
+    .cta-stars {
+        font-size: 0.8rem;
+    }
+    
+    .cta-glow-bg {
+        display: none;
+    }
+    
+    /* Journey Section Mobile */
+    .mystical-journey {
+        padding: 0 20px;
+    }
+    
+    .journey-path {
+        display: none; /* Hide the decorative path on mobile */
+    }
+    
+    .journey-steps {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 0;
+    }
+    
+    .journey-step {
+        margin-bottom: 20px;
+    }
+    
+    .step-portal {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 20px;
+    }
+    
+    .portal-glow {
+        width: 120%;
+        height: 120%;
+    }
+    
+    .portal-ring {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .step-number {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .content-card {
+        padding: 20px;
+        margin: 0 10px;
+    }
+    
+    .step-icon {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto 15px;
+    }
+    
+    .content-card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+    
+    .content-card p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .journey-completion {
+        margin-top: 30px;
+        padding: 0 20px;
+    }
+    
+    .completion-symbol {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 20px;
+    }
+    
+    .completion-text {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    
+    .journey-cta {
+        margin: 0 auto;
+    }
+    
+    .cta-content.journey-style {
+        padding: 15px 20px;
+    }
+    
+    .cta-urgency {
+        font-size: 0.85rem;
+        margin-top: 15px;
+    }
+}
+
+/* VSL Section */
+.vsl-section {
+    position: relative;
+    z-index: 100;
+    margin-top: -120px;
+    margin-bottom: -120px;
+    background: linear-gradient(to bottom, #0a0a0f 0%, #0a0a0f 70%, transparent 100%);
+    padding: 40px 0;
+}
+
+/* Gradient overlay voor smooth transition */
+.vsl-section::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to bottom, #0a0a0f 0%, transparent 100%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.vsl-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 100;
+}
+
+.vsl-container {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 16px;
+    padding: 3px;
+    position: relative;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+}
+
+.vsl-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 2px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-primary));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: borderGlow 3s linear infinite;
+}
+
+@keyframes borderGlow {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+.vsl-video-wrapper {
+    position: relative;
+    width: 100%;
+    /* Aspect ratio 16:9 voor een kleiner formaat */
+    padding-bottom: 56.25%;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Voor portrait video's gebruik deze aspect ratio */
+/* .vsl-video-wrapper {
+    padding-bottom: 133.33%;
+} */
+
+.vsl-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0a0a0f;
+    overflow: hidden;
+}
+
+.vsl-placeholder::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(93, 58, 155, 0.1) 0%, transparent 50%);
+    animation: mysticalPulse 6s ease-in-out infinite;
+}
+
+@keyframes mysticalPulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+.placeholder-content {
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.placeholder-icon {
+    font-size: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(255, 148, 78, 0.3);
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.placeholder-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: white;
+    font-family: var(--font-serif);
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+}
+
+.placeholder-content p {
+    color: var(--color-secondary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-shadow: 0 0 20px rgba(255, 148, 78, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .vsl-section {
+        padding: 30px 0;
+        margin-top: -80px;
+        margin-bottom: -80px;
+    }
+    
+    .vsl-wrapper {
+        max-width: 90%;
+    }
+    
+    .vsl-container {
+        padding: 2px;
+    }
+    
+    .vsl-video-wrapper {
+        padding-bottom: 75%; /* Langere video voor mobiel (4:3 ratio) */
+    }
+    
+    .placeholder-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    
+    .placeholder-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .placeholder-content p {
+        font-size: 0.8rem;
+    }
+    
+    /* Aanpassing voor problem section op mobiel */
+    .problem-section {
+        padding-top: 150px;
+    }
+}
+}    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <!-- Cosmic Background Elements -->
+            <div class="cosmic-bg">
+                <div class="stars"></div>
+                <div class="stars2"></div>
+                <div class="stars3"></div>
+            </div>
+            
+            <!-- Sacred Geometry Pattern -->
+            <div class="sacred-geometry">
+                <svg class="metatron-cube" viewBox="0 0 400 400" fill="none">
+                    <circle cx="200" cy="200" r="180" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+                    <circle cx="200" cy="200" r="150" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+                    <circle cx="200" cy="200" r="120" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+                </svg>
+            </div>
+            
+            <!-- Floating Numerology Elements -->
+            <div class="numerology-elements">
+                <div class="life-path-circle" data-number="1">
+                    <span>1</span>
+                    <div class="orbit"></div>
+                </div>
+                <div class="life-path-circle" data-number="9">
+                    <span>9</span>
+                    <div class="orbit"></div>
+                </div>
+                <div class="life-path-circle" data-number="11">
+                    <span>11</span>
+                    <div class="orbit"></div>
+                </div>
+                <div class="life-path-circle" data-number="22">
+                    <span>22</span>
+                    <div class="orbit"></div>
+                </div>
+                <div class="life-path-circle" data-number="33">
+                    <span>33</span>
+                    <div class="orbit"></div>
+                </div>
+            </div>
+            
+            <!-- Zodiac Wheel Background -->
+            <div class="zodiac-wheel">
+                <svg viewBox="0 0 500 500" class="rotating-zodiac">
+                    <circle cx="250" cy="250" r="240" fill="none" stroke="url(#zodiacGradient)" stroke-width="1" opacity="0.2"/>
+                    <defs>
+                        <linearGradient id="zodiacGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#5D3A9B;stop-opacity:0.3" />
+                            <stop offset="100%" style="stop-color:#FF944E;stop-opacity:0.3" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="mystical-badge">
+                    <span class="badge-stars">✦ ✧ ✦</span>
+                    <span>300+ mensen geholpen</span>
+                    <span class="badge-stars">✦ ✧ ✦</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-small">Je geboortedatum liegt niet</span>
+                    <span class="title-main gradient-text">Je probeert alleen iets anders te zijn</span>
+                </h1>
+                
+                <div class="birth-date-preview">
+                    <div class="calculator-header">
+                        <span class="calculator-title">Vul je geboortedatum in</span>
+                        <span class="calculator-subtitle">Dit getal vertelt wie je bent</span>
+                    </div>
+                    <div class="date-input-group">
+                        <input type="number" class="date-input day" placeholder="DD" min="1" max="31" maxlength="2">
+                        <span class="date-separator">/</span>
+                        <input type="number" class="date-input month" placeholder="MM" min="1" max="12" maxlength="2">
+                        <span class="date-separator">/</span>
+                        <input type="number" class="date-input year" placeholder="JJJJ" min="1950" max="2025" maxlength="4">
+                    </div>
+                    <div class="life-path-preview">
+                        <span class="preview-number">
+                            <div style="display: flex; gap: 30px; justify-content: center; align-items: center;">
+                                <div style="text-align: center;">
+                                    <div style="font-size: 0.75rem; color: rgba(255,255,255,0.9); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Levenspad</div>
+                                    <div style="display: flex; gap: 10px; align-items: center;">
+                                        <span style="font-size: 1.8rem; font-weight: bold; color: #FF944E;">?</span>
+                                        <span style="font-size: 1.2rem; color: rgba(255,255,255,0.3);">•</span>
+                                        <span style="font-size: 1.8rem; font-weight: bold; color: #5D3A9B;">?</span>
+                                    </div>
+                                </div>
+                                <span style="font-size: 1.5rem; color: rgba(255,255,255,0.2);">|</span>
+                                <div style="text-align: center;">
+                                    <div style="font-size: 0.75rem; color: rgba(255,255,255,0.9); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Mindplane</div>
+                                    <span style="font-size: 1.8rem; font-weight: bold; color: #fff;">?</span>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                
+                <p class="hero-subtitle">
+                    <strong>90 minuten</strong> met mij. Ik vertel je wat je getallen betekenen.
+                    Je snapt eindelijk waarom je doet wat je doet.
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="#offer" class="btn-cosmic">
+                        <span class="btn-bg"></span>
+                        <span class="btn-text">
+                            <span class="btn-icon">🔮</span>
+                            Ja, ik wil weten wie ik ben
+                        </span>
+                    </a>
+                    <div class="price-info">
+                        <span class="price-amount">€199</span>
+                        <span class="price-desc">voor 90 min reading + 4 bonussen</span>
+                    </div>
+                </div>
+                
+                <div class="trust-indicators">
+                    <div class="indicator">
+                        <span class="indicator-icon">⭐</span>
+                        <span>4.9/5 score</span>
+                    </div>
+                    <div class="indicator">
+                        <span class="indicator-icon">🔒</span>
+                        <span>100% Vertrouwd</span>
+                    </div>
+                    <div class="indicator">
+                        <span class="indicator-icon">⚡</span>
+                        <span>Direct Resultaat</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="numerology-wheel">
+                    <div class="wheel-center">
+                        <img src="https://cdn.shopify.com/s/files/1/0922/2212/8463/files/Robbin_de_nummerkoning_shopify_pf_1.png?v=1743837121" alt="Robbin de Nummerkoning" />
+                    </div>
+                    <div class="wheel-ring rotating">
+                        <div class="number-node" style="--i: 0"><span>1</span></div>
+                        <div class="number-node" style="--i: 1"><span>2</span></div>
+                        <div class="number-node" style="--i: 2"><span>3</span></div>
+                        <div class="number-node" style="--i: 3"><span>4</span></div>
+                        <div class="number-node" style="--i: 4"><span>5</span></div>
+                        <div class="number-node" style="--i: 5"><span>6</span></div>
+                        <div class="number-node" style="--i: 6"><span>7</span></div>
+                        <div class="number-node" style="--i: 7"><span>8</span></div>
+                        <div class="number-node" style="--i: 8"><span>9</span></div>
+                    </div>
+                    <div class="mystical-aura"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VSL Section -->
+    <div class="vsl-section">
+        <div class="container">
+            <div class="vsl-wrapper">
+                <div class="vsl-container">
+                    <div class="vsl-video-wrapper">
+                        <!-- Video placeholder - vervang later met je eigen video -->
+                        <div class="vsl-placeholder">
+                            <div class="placeholder-content">
+                                <span class="placeholder-icon">▶️</span>
+                                <h3>Video Sales Letter</h3>
+                                <p>Video wordt binnenkort toegevoegd</p>
+                            </div>
+                        </div>
+                        <!-- Uncomment en vervang met je eigen video embed code -->
+                        <!-- <iframe 
+                            src="YOUR_VIDEO_URL_HERE" 
+                            style="position: absolute !important; width: 100% !important; height: 100% !important; left: 0; top: 0; border: 0 none;"
+                            allow="autoplay; fullscreen;"
+                            loading="lazy">
+                        </iframe> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="cosmic-pattern"></div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Dit klinkt bekend</span>
+                <h2 class="section-title">Je zit niet vast. Je stelt gewoon uit.</h2>
+                <div class="mystical-divider">
+                    <span class="divider-line"></span>
+                    <span class="divider-symbol">✦</span>
+                    <span class="divider-line"></span>
+                </div>
+            </div>
+            
+            <div class="problem-grid">
+                <div class="problem-card" data-energy="chaos">
+                    <div class="card-aura"></div>
+                    <div class="problem-icon-wrapper">
+                        <svg class="problem-icon" viewBox="0 0 80 80" fill="none">
+                            <circle cx="40" cy="40" r="35" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+                            <path d="M40 20 L50 30 L40 40 L30 30 Z M40 40 L50 50 L40 60 L30 50 Z" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.1"/>
+                            <circle cx="40" cy="40" r="5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Je denkt te veel</h3>
+                    <p>Dezelfde vraag. Elke dag. Al maanden.</p>
+                    <div class="energy-indicator">
+                        <span class="energy-level" style="--level: 3"></span>
+                    </div>
+                </div>
+                
+                <div class="problem-card" data-energy="time">
+                    <div class="card-aura"></div>
+                    <div class="problem-icon-wrapper">
+                        <svg class="problem-icon" viewBox="0 0 80 80" fill="none">
+                            <circle cx="40" cy="40" r="35" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+                            <circle cx="40" cy="40" r="30" stroke="currentColor" stroke-width="1" stroke-dasharray="5 5" opacity="0.5"/>
+                            <path d="M40 20 V40 L55 55" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="40" cy="40" r="3" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Je bent er klaar mee</h3>
+                    <p>Maar je doet niks. Weer een week voorbij.</p>
+                    <div class="energy-indicator">
+                        <span class="energy-level" style="--level: 2"></span>
+                    </div>
+                </div>
+                
+                <div class="problem-card" data-energy="stuck">
+                    <div class="card-aura"></div>
+                    <div class="problem-icon-wrapper">
+                        <svg class="problem-icon" viewBox="0 0 80 80" fill="none">
+                            <circle cx="40" cy="40" r="35" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+                            <path d="M25 40 Q40 25 55 40 Q40 55 25 40" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.1"/>
+                            <circle cx="40" cy="40" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <circle cx="40" cy="40" r="3" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Dit is het niet</h3>
+                    <p>Je weet het. Maar wat dan wel?</p>
+                    <div class="energy-indicator">
+                        <span class="energy-level" style="--level: 1"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="problem-revelation">
+                <div class="revelation-content">
+                    <p class="revelation-text">Over een maand zit je <strong>nog steeds</strong> hier.</p>
+                    <p class="highlight-text">Als je niks doet.</p>
+                    <div class="cosmic-pulse"></div>
+                </div>
+                <div class="revelation-cta">
+                    <div class="cta-glow-bg"></div>
+                    <a href="#about" class="cta-content">
+                        <span class="cta-arrow">↓</span>
+                        <span class="cta-text">
+                            <span class="cta-main">Dit hoeft niet</span>
+                            <span class="cta-sub">Ik leg je uit waarom</span>
+                        </span>
+                        <span class="cta-stars">✦ ✧ ✦</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="mystical-bg-pattern">
+            <div class="constellation-lines"></div>
+        </div>
+        <div class="container">
+            <div class="about-header">
+                <span class="about-badge">Over mij</span>
+                <h2 class="section-title">
+                    <span class="title-line">Ik ben Robbin</span>
+                    <span class="title-accent">Ik lees getallen</span>
+                </h2>
+                <div class="mystical-divider">
+                    <span class="divider-line"></span>
+                    <span class="divider-symbol">◈</span>
+                    <span class="divider-line"></span>
+                </div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="mystical-intro">
+                        <div class="intro-aura"></div>
+                        <p class="lead-text">
+                            300+ mensen geholpen. <span class="name-highlight">In 90 minuten</span> vertel ik je 
+                            wat je getallen betekenen. Je snapt dan waarom je doet wat je doet. 
+                            En wat je moet veranderen.
+                        </p>
+                    </div>
+                    
+                    <div class="power-features">
+                        <div class="feature-card" data-power="precision">
+                            <div class="feature-glow"></div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-icon" viewBox="0 0 60 60" fill="none">
+                                    <circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+                                    <circle cx="30" cy="30" r="20" stroke="currentColor" stroke-width="1" stroke-dasharray="2 4"/>
+                                    <circle cx="30" cy="30" r="12" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="30" cy="30" r="4" fill="currentColor"/>
+                                    <path d="M30 10 V18 M30 42 V50 M10 30 H18 M42 30 H50" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Geen blabla</h4>
+                                <p>Ik zeg wat het is</p>
+                                <div class="power-meter">
+                                    <span class="power-fill" style="--power: 95%"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card" data-power="speed">
+                            <div class="feature-glow"></div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-icon" viewBox="0 0 60 60" fill="none">
+                                    <path d="M30 10 L35 25 H45 L30 50 L25 35 H15 L30 10Z" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.1"/>
+                                    <circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="1" opacity="0.3" stroke-dasharray="4 6"/>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h4>90 minuten</h4>
+                                <p>Alles wat je moet weten</p>
+                                <div class="power-meter">
+                                    <span class="power-fill" style="--power: 90%"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card" data-power="clarity">
+                            <div class="feature-glow"></div>
+                            <div class="feature-icon-wrapper">
+                                <svg class="feature-icon" viewBox="0 0 60 60" fill="none">
+                                    <path d="M30 15 L40 20 L40 30 L30 35 L20 30 L20 20 Z" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.1"/>
+                                    <path d="M30 35 V45 M25 40 L35 40" stroke="currentColor" stroke-width="2"/>
+                                    <circle cx="30" cy="25" r="5" fill="currentColor" opacity="0.5"/>
+                                    <circle cx="30" cy="25" r="3" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Je snapt het</h4>
+                                <p>Geen vage verhalen</p>
+                                <div class="power-meter">
+                                    <span class="power-fill" style="--power: 100%"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-testimonial">
+                    <div class="testimonial-constellation">
+                        <svg class="constellation-bg" viewBox="0 0 400 300" fill="none">
+                            <circle cx="50" cy="50" r="2" fill="currentColor" opacity="0.3"/>
+                            <circle cx="350" cy="50" r="2" fill="currentColor" opacity="0.3"/>
+                            <circle cx="200" cy="150" r="3" fill="currentColor" opacity="0.5"/>
+                            <circle cx="100" cy="250" r="2" fill="currentColor" opacity="0.3"/>
+                            <circle cx="300" cy="250" r="2" fill="currentColor" opacity="0.3"/>
+                            <path d="M50 50 L200 150 L350 50 M200 150 L100 250 M200 150 L300 250" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
+                        </svg>
+                    </div>
+                    
+                    <div class="testimonial-card cosmic">
+                        <div class="card-aura"></div>
+                        <div class="rating-stars">
+                            <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                            <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                            <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                            <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                            <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                        </div>
+                        <blockquote>
+                            "Ik zat vast. Wist niet wat ik moest doen met mijn werk. 
+                            Robbin zei: <span class="quote-highlight">Je bent een 3. Stop met nadenken.</span> 
+                            Nu heb ik mijn eigen zaak."
+                        </blockquote>
+                        <div class="testimonial-footer">
+                            <cite>— Laura Jansen</cite>
+                            <span class="testimonial-badge">Geverifieerd</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-cta">
+                <div class="cta-glow-bg"></div>
+                <a href="#benefits" class="cta-content">
+                    <span class="cta-arrow">↓</span>
+                    <span class="cta-text">
+                        <span class="cta-main">Dit is wat je krijgt</span>
+                        <span class="cta-sub">Jouw transformatie in 4 stappen</span>
+                    </span>
+                    <span class="cta-stars">✦ ✧ ✦</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section" id="benefits">
+        <div class="mystical-grid-bg">
+            <div class="grid-lines"></div>
+            <div class="energy-flow"></div>
+        </div>
+        
+        <div class="container">
+            <div class="benefits-header">
+                <span class="benefits-badge">Dit krijg je</span>
+                <h2 class="section-title">
+                    <span class="title-small">90 minuten met mij</span>
+                    <span class="title-main">Dit ga ik je vertellen</span>
+                </h2>
+                <div class="cosmic-separator">
+                    <span class="separator-line"></span>
+                    <div class="rotating-symbol">
+                        <svg viewBox="0 0 50 50" fill="none">
+                            <path d="M25 5 L30 15 L40 15 L32 22 L35 32 L25 26 L15 32 L18 22 L10 15 L20 15 Z" stroke="currentColor" stroke-width="1" fill="currentColor" fill-opacity="0.2"/>
+                            <circle cx="25" cy="25" r="23" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <span class="separator-line"></span>
+                </div>
+            </div>
+            
+            <div class="benefits-grid cosmic">
+                <div class="benefit-portal" data-element="self">
+                    <div class="portal-bg"></div>
+                    <div class="portal-number">1</div>
+                    <div class="benefit-content">
+                        <div class="benefit-icon-wrapper">
+                            <div class="icon-aura"></div>
+                            <svg class="benefit-icon" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="35" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                                <path d="M40 20 C30 20 25 30 25 40 C25 50 30 60 40 60 C50 60 55 50 55 40 C55 30 50 20 40 20" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.1"/>
+                                <circle cx="40" cy="35" r="8" fill="currentColor" opacity="0.5"/>
+                                <path d="M32 45 Q40 50 48 45" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <circle cx="35" cy="35" r="2" fill="currentColor"/>
+                                <circle cx="45" cy="35" r="2" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Wie je echt bent</h3>
+                        <p>Je getal. Wat het betekent. Simpel.</p>
+                        <div class="energy-bar">
+                            <span class="energy-progress" style="--progress: 0%"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-portal" data-element="clarity">
+                    <div class="portal-bg"></div>
+                    <div class="portal-number">2</div>
+                    <div class="benefit-content">
+                        <div class="benefit-icon-wrapper">
+                            <div class="icon-aura"></div>
+                            <svg class="benefit-icon" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="35" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                                <path d="M40 15 L50 25 L50 40 L40 50 L30 40 L30 25 Z" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.1"/>
+                                <circle cx="40" cy="40" r="15" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3"/>
+                                <circle cx="40" cy="40" r="8" fill="currentColor" opacity="0.8"/>
+                                <circle cx="40" cy="40" r="4" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Waarom je vast zit</h3>
+                        <p>De reden. Geen gelul.</p>
+                        <div class="energy-bar">
+                            <span class="energy-progress" style="--progress: 0%"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-portal" data-element="insight">
+                    <div class="portal-bg"></div>
+                    <div class="portal-number">3</div>
+                    <div class="benefit-content">
+                        <div class="benefit-icon-wrapper">
+                            <div class="icon-aura"></div>
+                            <svg class="benefit-icon" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="35" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                                <path d="M40 20 L45 30 L55 35 L45 40 L40 50 L35 40 L25 35 L35 30 Z" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.1"/>
+                                <circle cx="40" cy="40" r="5" fill="currentColor"/>
+                                <path d="M40 20 V60 M20 40 H60 M28 28 L52 52 M52 28 L28 52" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+                            </svg>
+                        </div>
+                        <h3>Wat je moet doen</h3>
+                        <p>Stap voor stap. Vandaag beginnen.</p>
+                        <div class="energy-bar">
+                            <span class="energy-progress" style="--progress: 0%"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-portal" data-element="timing">
+                    <div class="portal-bg"></div>
+                    <div class="portal-number">4</div>
+                    <div class="benefit-content">
+                        <div class="benefit-icon-wrapper">
+                            <div class="icon-aura"></div>
+                            <svg class="benefit-icon" viewBox="0 0 80 80" fill="none">
+                                <circle cx="40" cy="40" r="35" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                                <circle cx="40" cy="40" r="30" stroke="currentColor" stroke-width="2" stroke-dasharray="5 10" opacity="0.5"/>
+                                <circle cx="40" cy="40" r="25" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                                <path d="M40 15 V40 L55 55" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="40" cy="40" r="4" fill="currentColor"/>
+                                <path d="M40 10 L42 15 L38 15 Z M10 40 L15 38 L15 42 Z M40 70 L38 65 L42 65 Z M70 40 L65 42 L65 38 Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Wanneer je moet doen</h3>
+                        <p>De beste tijd. Voor jou.</p>
+                        <div class="energy-bar">
+                            <span class="energy-progress" style="--progress: 0%"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="benefits-footer">
+                <div class="mystical-quote">
+                    <span class="quote-symbol">◆</span>
+                    <p>"De getallen fluisteren je waarheid - je hoeft alleen maar te luisteren"</p>
+                    <span class="quote-symbol">◆</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="cosmic-journey-bg">
+            <div class="constellation-map"></div>
+            <div class="journey-particles"></div>
+        </div>
+        
+        <div class="container">
+            <div class="process-header">
+                <span class="process-badge">Jouw Reis</span>
+                <h2 class="section-title">
+                    <span class="title-line">Van Vraag tot Antwoord</span>
+                    <span class="title-accent">In 3 Mystieke Stappen</span>
+                </h2>
+                <div class="cosmic-divider">
+                    <span class="divider-dot"></span>
+                    <span class="divider-line"></span>
+                    <span class="divider-dot"></span>
+                    <span class="divider-line"></span>
+                    <span class="divider-dot"></span>
+                </div>
+            </div>
+            
+            <div class="mystical-journey">
+                <div class="journey-path">
+                    <svg class="path-svg" viewBox="0 0 800 200" fill="none">
+                        <path class="journey-line" d="M50 100 Q200 50 350 100 T650 100 L750 100" stroke="url(#journeyGradient)" stroke-width="2" stroke-dasharray="5 5" opacity="0.3"/>
+                        <defs>
+                            <linearGradient id="journeyGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#5D3A9B;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#FF944E;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#5D3A9B;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div class="energy-flow-line"></div>
+                </div>
+                
+                <div class="journey-steps">
+                    <div class="journey-step" data-step="1">
+                        <div class="step-portal">
+                            <div class="portal-glow"></div>
+                            <div class="portal-ring"></div>
+                            <div class="step-number">
+                                <span class="number-text">1</span>
+                                <div class="number-aura"></div>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <div class="content-card">
+                                <div class="card-shimmer"></div>
+                                <div class="step-icon">
+                                    <svg viewBox="0 0 60 60" fill="none">
+                                        <circle cx="30" cy="30" r="25" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                                        <path d="M20 20 L40 20 L40 40 L20 40 Z" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.1"/>
+                                        <path d="M25 30 L35 30 M30 25 L30 35" stroke="currentColor" stroke-width="2"/>
+                                        <circle cx="30" cy="30" r="3" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <h3>Initiatie</h3>
+                                <p>Kies het moment dat de sterren gunstig staan voor jouw reading</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="journey-step" data-step="2">
+                        <div class="step-portal">
+                            <div class="portal-glow"></div>
+                            <div class="portal-ring"></div>
+                            <div class="step-number">
+                                <span class="number-text">2</span>
+                                <div class="number-aura"></div>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <div class="content-card">
+                                <div class="card-shimmer"></div>
+                                <div class="step-icon">
+                                    <svg viewBox="0 0 60 60" fill="none">
+                                        <circle cx="30" cy="30" r="25" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                                        <path d="M15 25 L30 35 L45 25 L45 35 L30 45 L15 35 Z" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.1"/>
+                                        <path d="M15 20 L30 30 L45 20" stroke="currentColor" stroke-width="2"/>
+                                        <circle cx="30" cy="15" r="3" fill="currentColor" opacity="0.5"/>
+                                    </svg>
+                                </div>
+                                <h3>Verbinding</h3>
+                                <p>Ontvang je persoonlijke toegangspoort tot de reading</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="journey-step" data-step="3">
+                        <div class="step-portal">
+                            <div class="portal-glow"></div>
+                            <div class="portal-ring"></div>
+                            <div class="step-number">
+                                <span class="number-text">3</span>
+                                <div class="number-aura"></div>
+                            </div>
+                        </div>
+                        <div class="step-content">
+                            <div class="content-card">
+                                <div class="card-shimmer"></div>
+                                <div class="step-icon">
+                                    <svg viewBox="0 0 60 60" fill="none">
+                                        <circle cx="30" cy="30" r="25" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                                        <circle cx="30" cy="30" r="20" stroke="currentColor" stroke-width="2" stroke-dasharray="3 3" opacity="0.5"/>
+                                        <circle cx="30" cy="30" r="15" stroke="currentColor" stroke-width="1" opacity="0.7"/>
+                                        <circle cx="30" cy="30" r="10" fill="currentColor" opacity="0.2"/>
+                                        <circle cx="30" cy="30" r="5" fill="currentColor"/>
+                                        <path d="M30 5 L32 10 L28 10 Z M55 30 L50 28 L50 32 Z M30 55 L28 50 L32 50 Z M5 30 L10 32 L10 28 Z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <h3>Transformatie</h3>
+                                <p>30 minuten waarin je levensgetal zijn geheimen prijsgeeft</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="journey-completion">
+                    <div class="completion-symbol">
+                        <svg viewBox="0 0 100 100" fill="none">
+                            <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+                            <path d="M50 20 L55 35 L70 35 L58 45 L63 60 L50 50 L37 60 L42 45 L30 35 L45 35 Z" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <p class="completion-text">Jouw reis naar helderheid begint hier</p>
+                    <div class="journey-cta">
+                        <div class="cta-glow-bg"></div>
+                        <a href="#offer" class="cta-content journey-style">
+                            <span class="cta-arrow">↓</span>
+                            <span class="cta-text">
+                                <span class="cta-main">Ik wil dit ook</span>
+                                <span class="cta-sub">90 minuten. Dan weet je het.</span>
+                            </span>
+                            <span class="cta-stars">✦ ✧ ✦</span>
+                        </a>
+                        <p class="cta-urgency">Nog <span class="urgency-timer">15:00</span> voor je bonus</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section" id="testimonials">
+        <div class="cosmic-testimonial-bg">
+            <div class="constellation-pattern"></div>
+            <div class="cosmic-dust"></div>
+            <div class="energy-waves"></div>
+        </div>
+        
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Ervaringen uit het Veld</span>
+                <h2 class="testimonial-title">
+                    <span class="title-line">Transformaties door</span>
+                    <span class="title-highlight">Numerologische Inzichten</span>
+                </h2>
+                <div class="testimonial-stars-decoration">
+                    <svg class="star-constellation" width="200" height="100" viewBox="0 0 200 100">
+                        <path d="M 10 50 L 50 30 L 90 50 L 130 40 L 170 50 L 190 30" stroke="rgba(255, 148, 78, 0.3)" stroke-width="1" fill="none"/>
+                        <circle cx="10" cy="50" r="2" fill="#FF944E" class="star-twinkle"/>
+                        <circle cx="50" cy="30" r="3" fill="#FF944E" class="star-twinkle" style="animation-delay: 0.2s"/>
+                        <circle cx="90" cy="50" r="2" fill="#FF944E" class="star-twinkle" style="animation-delay: 0.4s"/>
+                        <circle cx="130" cy="40" r="4" fill="#FF944E" class="star-twinkle" style="animation-delay: 0.6s"/>
+                        <circle cx="170" cy="50" r="2" fill="#FF944E" class="star-twinkle" style="animation-delay: 0.8s"/>
+                        <circle cx="190" cy="30" r="3" fill="#FF944E" class="star-twinkle" style="animation-delay: 1s"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card mystical">
+                    <div class="testimonial-glow"></div>
+                    <div class="testimonial-content">
+                        <div class="quote-symbol">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <path d="M10 20 Q 10 10, 20 10 T 30 20 Q 30 30, 20 30 T 10 20" fill="none" stroke="#FF944E" stroke-width="2" opacity="0.5"/>
+                                <text x="20" y="25" text-anchor="middle" fill="#FF944E" font-size="24" font-family="serif">"</text>
+                            </svg>
+                        </div>
+                        <blockquote>
+                            Ik zat met een dringende vraag over een carrièreswitch. Binnen 24 uur had ik niet alleen mijn numerologische analyse, maar ook concrete stappen die ik kon zetten. De helderheid die ik kreeg was ongelooflijk!
+                        </blockquote>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <div class="avatar-glow"></div>
+                                    <span class="avatar-initial">M</span>
+                                </div>
+                                <div class="author-info">
+                                    <cite>Mark de Vries</cite>
+                                    <span class="author-title">Ondernemer</span>
+                                </div>
+                            </div>
+                            <div class="rating-stars">
+                                <svg width="120" height="24" viewBox="0 0 120 24">
+                                    <defs>
+                                        <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#FF944E;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#FFB380;stop-opacity:1" />
+                                        </linearGradient>
+                                    </defs>
+                                    <g class="star-group">
+                                        <path d="M12 2 L14.09 8.26 L20.18 8.91 L16.09 13.01 L17.18 19.02 L12 16 L6.82 19.02 L7.91 13.01 L3.82 8.91 L9.91 8.26 Z" fill="url(#starGradient)" transform="translate(0, 0)"/>
+                                        <path d="M12 2 L14.09 8.26 L20.18 8.91 L16.09 13.01 L17.18 19.02 L12 16 L6.82 19.02 L7.91 13.01 L3.82 8.91 L9.91 8.26 Z" fill="url(#starGradient)" transform="translate(24, 0)"/>
+                                        <path d="M12 2 L14.09 8.26 L20.18 8.91 L16.09 13.01 L17.18 19.02 L12 16 L6.82 19.02 L7.91 13.01 L3.82 8.91 L9.91 8.26 Z" fill="url(#starGradient)" transform="translate(48, 0)"/>
+                                        <path d="M12 2 L14.09 8.26 L20.18 8.91 L16.09 13.01 L17.18 19.02 L12 16 L6.82 19.02 L7.91 13.01 L3.82 8.91 L9.91 8.26 Z" fill="url(#starGradient)" transform="translate(72, 0)"/>
+                                        <path d="M12 2 L14.09 8.26 L20.18 8.91 L16.09 13.01 L17.18 19.02 L12 16 L6.82 19.02 L7.91 13.01 L3.82 8.91 L9.91 8.26 Z" fill="url(#starGradient)" transform="translate(96, 0)"/>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card mystical featured">
+                    <div class="testimonial-glow"></div>
+                    <div class="featured-badge">
+                        <span>Uitgelicht</span>
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="quote-symbol">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <path d="M10 20 Q 10 10, 20 10 T 30 20 Q 30 30, 20 30 T 10 20" fill="none" stroke="#FF944E" stroke-width="2" opacity="0.5"/>
+                                <text x="20" y="25" text-anchor="middle" fill="#FF944E" font-size="24" font-family="serif">"</text>
+                            </svg>
+                        </div>
+                        <blockquote>
+                            Na jaren zoeken naar mijn ware roeping, bracht één sessie met deze numeroloog me exact waar ik moest zijn. De precisie waarmee mijn levensnummers werden uitgelegd was verbluffend. Nu run ik mijn eigen healing practice!
+                        </blockquote>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <div class="avatar-glow"></div>
+                                    <span class="avatar-initial">S</span>
+                                </div>
+                                <div class="author-info">
+                                    <cite>Sarah Jansen</cite>
+                                    <span class="author-title">Spiritueel Coach</span>
+                                </div>
+                            </div>
+                            <div class="rating-stars">
+                                <svg width="120" height="24" viewBox="0 0 120 24">
+                                    <defs>
+                                        <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#FF944E;stop-opacity:1"></stop>
+                                            <stop offset="100%" style="stop-color:#FFB380;stop-opacity:1"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                    <g class="star-group">
+                                        <path d="M12 2 L14.09 8.26 L20.18 8.91 L16.09 13.01 L17.18 19.02 L12 16 L6.82 19.02 L7.91 13.01 L3.82 8.91 L9.91 8.26 Z" fill="url(#starGradient)" transform="translate(0, 0)"/>
+                                        <path d="M12 2 L14.09 8.26 L20.18 8.91 L16.09 13.01 L17.18 19.02 L12 16 L6.82 19.02 L7.91 13.01 L3.82 8.91 L9.91 8.26 Z" fill="url(#starGradient)" transform="translate(24, 0)"/>
+                                        <path d="M12 2 L14.09 8.26 L20.18 8.91 L16.09 13.01 L17.18 19.02 L12 16 L6.82 19.02 L7.91 13.01 L3.82 8.91 L9.91 8.26 Z" fill="url(#starGradient)" transform="translate(48, 0)"/>
+                                        <path d="M12 2 L14.09 8.26 L20.18 8.91 L16.09 13.01 L17.18 19.02 L12 16 L6.82 19.02 L7.91 13.01 L3.82 8.91 L9.91 8.26 Z" fill="url(#starGradient)" transform="translate(72, 0)"/>
+                                        <path d="M12 2 L14.09 8.26 L20.18 8.91 L16.09 13.01 L17.18 19.02 L12 16 L6.82 19.02 L7.91 13.01 L3.82 8.91 L9.91 8.26 Z" fill="url(#starGradient)" transform="translate(96, 0)"/>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card mystical">
+                    <div class="testimonial-glow"></div>
+                    <div class="testimonial-content">
+                        <div class="quote-symbol">
+                            <svg width="40" height="40" viewBox="0 0 40 40">
+                                <path d="M10 20 Q 10 10, 20 10 T 30 20 Q 30 30, 20 30 T 10 20" fill="none" stroke="#FF944E" stroke-width="2" opacity="0.5"/>
+                                <text x="20" y="25" text-anchor="middle" fill="#FF944E" font-size="24" font-family="serif">"</text>
+                            </svg>
+                        </div>
+                        <blockquote>
+                            De snelheid van antwoord was geweldig, maar de diepgang nog meer. Ik kreeg inzichten in patronen die ik al jaren met me meedraag. Nu begrijp ik eindelijk waarom bepaalde situaties zich blijven herhalen.
+                        </blockquote>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <div class="avatar-glow"></div>
+                                    <span class="avatar-initial">L</span>
+                                </div>
+                                <div class="author-info">
+                                    <cite>Linda Bakker</cite>
+                                    <span class="author-title">Therapeut</span>
+                                </div>
+                            </div>
+                            <div class="rating-stars">
+                                <svg width="120" height="24" viewBox="0 0 120 24">
+                                    <defs>
+                                        <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#FF944E;stop-opacity:1"></stop>
+                                            <stop offset="100%" style="stop-color:#FFB380;stop-opacity:1"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                    <g class="star-group">
+                                        <path d="M12 2 L14.09 8.26 L20.18 8.91 L16.09 13.01 L17.18 19.02 L12 16 L6.82 19.02 L7.91 13.01 L3.82 8.91 L9.91 8.26 Z" fill="url(#starGradient)" transform="translate(0, 0)"/>
+                                        <path d="M12 2 L14.09 8.26 L20.18 8.91 L16.09 13.01 L17.18 19.02 L12 16 L6.82 19.02 L7.91 13.01 L3.82 8.91 L9.91 8.26 Z" fill="url(#starGradient)" transform="translate(24, 0)"/>
+                                        <path d="M12 2 L14.09 8.26 L20.18 8.91 L16.09 13.01 L17.18 19.02 L12 16 L6.82 19.02 L7.91 13.01 L3.82 8.91 L9.91 8.26 Z" fill="url(#starGradient)" transform="translate(48, 0)"/>
+                                        <path d="M12 2 L14.09 8.26 L20.18 8.91 L16.09 13.01 L17.18 19.02 L12 16 L6.82 19.02 L7.91 13.01 L3.82 8.91 L9.91 8.26 Z" fill="url(#starGradient)" transform="translate(72, 0)"/>
+                                        <path d="M12 2 L14.09 8.26 L20.18 8.91 L16.09 13.01 L17.18 19.02 L12 16 L6.82 19.02 L7.91 13.01 L3.82 8.91 L9.91 8.26 Z" fill="url(#starGradient)" transform="translate(96, 0)"/>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-nav">
+                <button class="nav-dot active" data-testimonial="0"></button>
+                <button class="nav-dot" data-testimonial="1"></button>
+                <button class="nav-dot" data-testimonial="2"></button>
+            </div>
+            
+            <div class="testimonial-cta">
+                <div class="cta-cosmic-bg"></div>
+                <div class="cta-content">
+                    <p class="cta-subtitle">Ook jouw transformatie begint hier</p>
+                    <h3 class="cta-title">Klaar om je eigen doorbraak te ervaren?</h3>
+                    <p class="cta-note">300+ tevreden zielen gingen je voor</p>
+                    <a href="#offer" class="btn-testimonial">
+                        <span class="btn-glow"></span>
+                        <span class="btn-content">
+                            <span class="btn-icon">✨</span>
+                            <span class="btn-text">Start Jouw Reading</span>
+                            <span class="btn-arrow">→</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section class="offer-section" id="offer">
+        <div class="mystical-offer-bg">
+            <div class="sacred-geometry-bg"></div>
+            <div class="energy-field"></div>
+            <div class="floating-stars"></div>
+        </div>
+        
+        <div class="container">
+            <div class="offer-portal">
+                <div class="portal-glow-effect"></div>
+                <div class="portal-border"></div>
+                
+                <div class="offer-header">
+                    <span class="offer-badge">Laatste Kans</span>
+                    <h2 class="offer-title">
+                        <span class="title-small">Jouw Poort naar</span>
+                        <span class="title-main">Numerologische Wijsheid</span>
+                    </h2>
+                    <div class="cosmic-timer" id="countdown">
+                        <p class="timer-text">tot deze bonus verdwijnt</p>
+                        <div class="timer-aura"></div>
+                        <div class="timer-content">
+                            <div class="timer-item">
+                                <span id="minutes" class="timer-number">15</span>
+                                <span class="timer-label">min</span>
+                            </div>
+                            <div class="timer-separator">
+                                <span class="separator-dot"></span>
+                                <span class="separator-dot"></span>
+                            </div>
+                            <div class="timer-item">
+                                <span id="seconds" class="timer-number">00</span>
+                                <span class="timer-label">sec</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="offer-content">
+                    <div class="price-portal">
+                        <div class="price-glow"></div>
+                        <div class="price-content">
+                            <p class="price-label">Dit krijg je (waarde €330):</p>
+                            <div class="price-display">
+                                <span class="price-currency">€</span>
+                                <span class="price-amount">199</span>
+                            </div>
+                            <p class="price-subtitle">90 minuten 1-op-1 + 3 bonussen</p>
+                            <div class="price-stars">
+                                <svg width="100" height="20" viewBox="0 0 100 20">
+                                    <path d="M10 2 L12 8 L18 8 L13 12 L15 18 L10 14 L5 18 L7 12 L2 8 L8 8 Z" fill="#FF944E" opacity="0.3"/>
+                                    <path d="M50 2 L52 8 L58 8 L53 12 L55 18 L50 14 L45 18 L47 12 L42 8 L48 8 Z" fill="#FF944E" opacity="0.5"/>
+                                    <path d="M90 2 L92 8 L98 8 L93 12 L95 18 L90 14 L85 18 L87 12 L82 8 L88 8 Z" fill="#FF944E" opacity="0.3"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bonus-portal">
+                        <div class="bonus-aura"></div>
+                        <div class="bonus-badge-mystical">
+                            <svg width="30" height="30" viewBox="0 0 30 30">
+                                <circle cx="15" cy="15" r="14" stroke="#FF944E" stroke-width="2" fill="none"/>
+                                <path d="M15 5 L18 12 L25 12 L19 17 L22 24 L15 19 L8 24 L11 17 L5 12 L12 12 Z" fill="#FF944E"/>
+                            </svg>
+                            <span>DIT KRIJG JE ER BIJ</span>
+                        </div>
+                        <h3>Alles wat je krijgt:</h3>
+                        <div class="bonus-item mystical">
+                            <div class="bonus-icon">
+                                <svg width="40" height="40" viewBox="0 0 40 40">
+                                    <circle cx="20" cy="20" r="18" stroke="#5D3A9B" stroke-width="2" fill="none" opacity="0.5"/>
+                                    <path d="M20 8 L24 16 L32 16 L26 22 L28 30 L20 26 L12 30 L14 22 L8 16 L16 16 Z" fill="#5D3A9B" opacity="0.8"/>
+                                    <circle cx="20" cy="20" r="5" fill="#FF944E"/>
+                                </svg>
+                            </div>
+                            <div class="bonus-details">
+                                <strong>1. Premium 1-op-1 Reading (90 minuten)</strong>
+                                <p class="bonus-title">We bellen. Ik vertel je alles over je getallen.</p>
+                                <p class="bonus-value">
+                                    <span class="value-label">Waarde:</span>
+                                    <span class="value-amount">€165</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bonus-item mystical">
+                            <div class="bonus-icon">
+                                <svg width="40" height="40" viewBox="0 0 40 40">
+                                    <circle cx="20" cy="20" r="18" stroke="#5D3A9B" stroke-width="2" fill="none" opacity="0.5"/>
+                                    <path d="M20 8 L24 16 L32 16 L26 22 L28 30 L20 26 L12 30 L14 22 L8 16 L16 16 Z" fill="#5D3A9B" opacity="0.8"/>
+                                    <circle cx="20" cy="20" r="5" fill="#FF944E"/>
+                                </svg>
+                            </div>
+                            <div class="bonus-details">
+                                <strong>2. Numerology Calendar 2025</strong>
+                                <p class="bonus-title">Weet precies wanneer je wat moet doen in 2025</p>
+                                <p class="bonus-value">
+                                    <span class="value-label">Waarde:</span>
+                                    <span class="value-amount">€45</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bonus-item mystical">
+                            <div class="bonus-icon">
+                                <svg width="40" height="40" viewBox="0 0 40 40">
+                                    <circle cx="20" cy="20" r="18" stroke="#5D3A9B" stroke-width="2" fill="none" opacity="0.5"/>
+                                    <path d="M20 8 L24 16 L32 16 L26 22 L28 30 L20 26 L12 30 L14 22 L8 16 L16 16 Z" fill="#5D3A9B" opacity="0.8"/>
+                                    <circle cx="20" cy="20" r="5" fill="#FF944E"/>
+                                </svg>
+                            </div>
+                            <div class="bonus-details">
+                                <strong>3. E-book "Waarom je manifestaties niet werken"</strong>
+                                <p class="bonus-title">Snap eindelijk waarom dingen niet lukken</p>
+                                <p class="bonus-value">
+                                    <span class="value-label">Waarde:</span>
+                                    <span class="value-amount">€30</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bonus-item mystical">
+                            <div class="bonus-icon">
+                                <svg width="40" height="40" viewBox="0 0 40 40">
+                                    <circle cx="20" cy="20" r="18" stroke="#5D3A9B" stroke-width="2" fill="none" opacity="0.5"/>
+                                    <path d="M20 8 L24 16 L32 16 L26 22 L28 30 L20 26 L12 30 L14 22 L8 16 L16 16 Z" fill="#5D3A9B" opacity="0.8"/>
+                                    <circle cx="20" cy="20" r="5" fill="#FF944E"/>
+                                </svg>
+                            </div>
+                            <div class="bonus-details">
+                                <strong>4. Boek "The Power of Timing" (60+ pagina's)</strong>
+                                <p class="bonus-title">Leer wanneer je moet doen wat je moet doen</p>
+                                <p class="bonus-value">
+                                    <span class="value-label">Waarde:</span>
+                                    <span class="value-amount">€90</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-cosmic">
+                        <a href="https://calendly.com/28core/mini-reading-clone" class="btn-offer-mystical">
+                            <span class="btn-aura"></span>
+                            <span class="btn-stars"></span>
+                            <span class="btn-content">
+                                <span class="btn-main">Ja, ik wil dit hebben</span>
+                                <span class="btn-sub">€199 voor alles (waarde €330)</span>
+                            </span>
+                        </a>
+                    </div>
+                    
+                    <div class="guarantee-mystical">
+                        <div class="guarantee-seal">
+                            <svg width="80" height="80" viewBox="0 0 80 80">
+                                <circle cx="40" cy="40" r="35" stroke="#FF944E" stroke-width="2" fill="none" stroke-dasharray="5 5" opacity="0.5"/>
+                                <circle cx="40" cy="40" r="30" stroke="#5D3A9B" stroke-width="1" fill="none"/>
+                                <path d="M40 15 L45 30 L60 30 L48 40 L53 55 L40 45 L27 55 L32 40 L20 30 L35 30 Z" fill="#FF944E" opacity="0.8"/>
+                                <text x="40" y="45" text-anchor="middle" fill="white" font-size="8" font-weight="bold">100%</text>
+                            </svg>
+                        </div>
+                        <div class="guarantee-text">
+                            <p class="guarantee-title">Kosmische Garantie</p>
+                            <p class="guarantee-subtitle">100% Tevredenheid of je energie terug</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="subtle-cosmic-bg">
+            <div class="final-stars"></div>
+        </div>
+        <div class="container">
+            <div class="final-content">
+                <div class="cosmic-divider-top">
+                    <span class="divider-star">✦</span>
+                    <span class="divider-line"></span>
+                    <span class="divider-star">✦</span>
+                </div>
+                <h2 class="final-title">Wacht niet langer op 'het juiste moment'</h2>
+                <p class="subtitle gradient-text">Creëer het nu.</p>
+                <div class="final-quote-wrapper">
+                    <div class="robbin-image-final">
+                        <img src="https://cdn.shopify.com/s/files/1/0922/2212/8463/files/Robbin_de_nummerkoning_shopify_pf_1.png?v=1743837121" alt="Robbin de Nummerkoning">
+                        <div class="image-glow"></div>
+                    </div>
+                    <blockquote class="final-quote mystical">
+                        <span class="quote-mark">"</span>
+                        <p class="quote-text">
+                            Je kunt jezelf niet veranderen als je niet begrijpt wie je bent.<br>
+                            <span class="highlight">En wie je bent staat geschreven in je geboortedatum.</span>
+                        </p>
+                        <cite>— Robbin de Nummerkoning</cite>
+                    </blockquote>
+                </div>
+                <a href="https://calendly.com/28core/mini-reading-clone" class="btn-final-mystical">
+                    <span class="btn-glow"></span>
+                    <span class="btn-content">
+                        <span>Ja, ik wil dit nu voor €199</span>
+                        <svg class="btn-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </a>
+                <div class="cosmic-divider-bottom">
+                    <span class="divider-star">✦</span>
+                    <span class="divider-line"></span>
+                    <span class="divider-star">✦</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Robbin de Nummerkoning. Alle rechten voorbehouden.</p>
+            <p class="footer-note">"Gewoon doen. Je krijgt er geen spijt van." - Chantal</p>
+        </div>
+    </footer>
+
+    <script>
+        // Life Path Number Calculator
+        function calculateLifePath() {
+            const day = document.querySelector('.date-input.day').value;
+            const month = document.querySelector('.date-input.month').value;
+            const year = document.querySelector('.date-input.year').value;
+            
+            if (day && month && year) {
+                // 1. Life Path Number (Reduced)
+                // Add full day + full month + individual digits of year
+                let reduced = parseInt(day) + parseInt(month);
+                for (let digit of year) {
+                    reduced += parseInt(digit);
+                }
+                
+                // 2. Life Path Number (Unreduced)
+                // Split every digit and add them together
+                let unreduced = 0;
+                const fullDate = day + month + year;
+                for (let digit of fullDate) {
+                    unreduced += parseInt(digit);
+                }
+                
+                // 3. Mind Plane Number
+                // Just the day part as a number
+                const mindplane = parseInt(day);
+                
+                // Create display text with labeled sections
+                let displayText = `<div style="display: flex; gap: 30px; justify-content: center; align-items: center;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 0.75rem; color: rgba(255,255,255,0.9); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Levenspad</div>
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <span id="reduced" style="font-size: 1.8rem; font-weight: bold; color: #FF944E;">${reduced}</span>
+                            <span style="font-size: 1.2rem; color: rgba(255,255,255,0.3);">•</span>
+                            <span id="unreduced" style="font-size: 1.8rem; font-weight: bold; color: #5D3A9B;">${unreduced}</span>
+                        </div>
+                    </div>
+                    <span style="font-size: 1.5rem; color: rgba(255,255,255,0.2);">|</span>
+                    <div style="text-align: center;">
+                        <div style="font-size: 0.75rem; color: rgba(255,255,255,0.9); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Mindplane</div>
+                        <span id="mindplane" style="font-size: 1.8rem; font-weight: bold; color: #fff;">${mindplane}</span>
+                    </div>
+                </div>`;
+                
+                // Update preview with HTML
+                const previewEl = document.querySelector('.preview-number');
+                previewEl.innerHTML = displayText;
+                previewEl.style.animation = 'pulse 0.5s ease';
+                
+                // Highlight corresponding number in wheel (using reduced number)
+                document.querySelectorAll('.number-node').forEach(node => {
+                    node.style.background = '';
+                    node.style.transform = '';
+                    // Only highlight if the number is between 1-9 (single digit)
+                    const nodeValue = parseInt(node.textContent);
+                    if (nodeValue === (reduced % 10) || nodeValue === (mindplane % 10)) {
+                        node.style.background = 'linear-gradient(135deg, #FF944E, #E67A35)';
+                        node.style.transform = 'scale(1.2)';
+                    }
+                });
+            } else {
+                // Show default structure with question marks
+                const previewEl = document.querySelector('.preview-number');
+                previewEl.innerHTML = `<div style="display: flex; gap: 30px; justify-content: center; align-items: center;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 0.75rem; color: rgba(255,255,255,0.9); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Levenspad</div>
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <span style="font-size: 1.8rem; font-weight: bold; color: #FF944E;">?</span>
+                            <span style="font-size: 1.2rem; color: rgba(255,255,255,0.3);">•</span>
+                            <span style="font-size: 1.8rem; font-weight: bold; color: #5D3A9B;">?</span>
+                        </div>
+                    </div>
+                    <span style="font-size: 1.5rem; color: rgba(255,255,255,0.2);">|</span>
+                    <div style="text-align: center;">
+                        <div style="font-size: 0.75rem; color: rgba(255,255,255,0.9); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px;">Mindplane</div>
+                        <span style="font-size: 1.8rem; font-weight: bold; color: #fff;">?</span>
+                    </div>
+                </div>`;
+            }
+        }
+        
+        // Add event listeners to date inputs
+        document.querySelectorAll('.date-input').forEach(input => {
+            input.addEventListener('input', calculateLifePath);
+            
+            // Enforce max value on input
+            input.addEventListener('input', function() {
+                const max = parseInt(this.getAttribute('max'));
+                const min = parseInt(this.getAttribute('min'));
+                let value = parseInt(this.value);
+                
+                // Special handling for year input - allow typing freely
+                if (this.classList.contains('year')) {
+                    // Only validate when the input is complete (4 digits)
+                    if (this.value.length === 4) {
+                        if (value > max) {
+                            this.value = max;
+                        } else if (value < min) {
+                            this.value = min;
+                        }
+                    }
+                } else {
+                    // Normal validation for day and month
+                    if (value > max) {
+                        this.value = max;
+                    } else if (value < min && this.value !== '') {
+                        this.value = min;
+                    }
+                }
+                
+                // Auto-focus next input
+                if (this.value.length === parseInt(this.getAttribute('maxlength'))) {
+                    const allInputs = Array.from(document.querySelectorAll('.date-input'));
+                    const currentIndex = allInputs.indexOf(this);
+                    if (currentIndex < allInputs.length - 1) {
+                        allInputs[currentIndex + 1].focus();
+                    }
+                }
+            });
+            
+            // Prevent typing invalid characters
+            input.addEventListener('keydown', function(e) {
+                // Allow backspace, delete, tab, escape, enter
+                if ([8, 9, 27, 13, 46].indexOf(e.keyCode) !== -1 ||
+                    // Allow Ctrl+A, Ctrl+C, Ctrl+V, Ctrl+X
+                    (e.keyCode === 65 && e.ctrlKey === true) ||
+                    (e.keyCode === 67 && e.ctrlKey === true) ||
+                    (e.keyCode === 86 && e.ctrlKey === true) ||
+                    (e.keyCode === 88 && e.ctrlKey === true)) {
+                    return;
+                }
+                // Ensure that it is a number and stop the keypress
+                if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                    e.preventDefault();
+                }
+            });
+        });
+        
+        // Countdown timer
+        function startCountdown() {
+            const countdownEl = document.getElementById('countdown');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+            const urgencyTimer = document.querySelector('.urgency-timer');
+            
+            let time = 900; // 15 minutes in seconds
+            
+            const interval = setInterval(() => {
+                const minutes = Math.floor(time / 60);
+                const seconds = time % 60;
+                
+                const formattedTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                
+                minutesEl.textContent = minutes.toString().padStart(2, '0');
+                secondsEl.textContent = seconds.toString().padStart(2, '0');
+                
+                // Update urgency timer in journey section
+                if (urgencyTimer) {
+                    urgencyTimer.textContent = formattedTime;
+                }
+                
+                if (time > 0) {
+                    time--;
+                } else {
+                    clearInterval(interval);
+                    countdownEl.style.display = 'none';
+                    if (urgencyTimer) {
+                        urgencyTimer.parentElement.style.display = 'none';
+                    }
+                }
+            }, 1000);
+        }
+        
+        // Start countdown when page loads
+        window.addEventListener('load', startCountdown);
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Add mystical glow effect on mouse move
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            const aura = document.querySelector('.mystical-aura');
+            if (aura) {
+                aura.style.background = 
+                    `radial-gradient(circle at ${x * 100}% ${y * 100}%, rgba(93, 58, 155, 0.4) 0%, transparent 50%)`;
+            }
+        });
+        
+        // Animate energy bars when in view
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBars = entry.target.querySelectorAll('.energy-progress');
+                    progressBars.forEach((bar, index) => {
+                        setTimeout(() => {
+                            bar.style.setProperty('--progress', '100%');
+                        }, index * 200);
+                    });
+                }
+            });
+        }, observerOptions);
+        
+        const benefitsSection = document.querySelector('.benefits-grid.cosmic');
+        if (benefitsSection) {
+            observer.observe(benefitsSection);
+        }
+        
+        // Testimonial carousel functionality
+        const testimonialCards = document.querySelectorAll('.testimonial-card.mystical');
+        const navDots = document.querySelectorAll('.nav-dot');
+        let currentTestimonial = 0;
+        
+        function showTestimonial(index) {
+            // Hide all testimonials
+            testimonialCards.forEach(card => {
+                card.style.display = 'none';
+                card.style.opacity = '0';
+            });
+            
+            // Remove active class from all dots
+            navDots.forEach(dot => dot.classList.remove('active'));
+            
+            // Show selected testimonial
+            if (testimonialCards[index]) {
+                testimonialCards[index].style.display = 'block';
+                setTimeout(() => {
+                    testimonialCards[index].style.opacity = '1';
+                }, 50);
+            }
+            
+            // Add active class to selected dot
+            if (navDots[index]) {
+                navDots[index].classList.add('active');
+            }
+            
+            currentTestimonial = index;
+        }
+        
+        // Add click handlers to navigation dots
+        navDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showTestimonial(index);
+            });
+        });
+        
+        // Auto-rotate testimonials
+        function autoRotateTestimonials() {
+            const nextIndex = (currentTestimonial + 1) % testimonialCards.length;
+            showTestimonial(nextIndex);
+        }
+        
+        // Start auto-rotation
+        let testimonialInterval = setInterval(autoRotateTestimonials, 5000);
+        
+        // Pause auto-rotation on hover
+        const testimonialsGrid = document.querySelector('.testimonials-grid');
+        if (testimonialsGrid) {
+            testimonialsGrid.addEventListener('mouseenter', () => {
+                clearInterval(testimonialInterval);
+            });
+            
+            testimonialsGrid.addEventListener('mouseleave', () => {
+                testimonialInterval = setInterval(autoRotateTestimonials, 5000);
+            });
+        }
+        
+        // Show first testimonial initially
+        showTestimonial(0);
+    </script>
+</body>
+</html>
