@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Management - Nummerkoning</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --color-primary: #5D3A9B;
+        --color-primary-dark: #4A2E7D;
+        --color-secondary: #FF944E;
+        --color-secondary-dark: #E67A35;
+      }
+
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background-color: #0a0a0f;
+        color: white;
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Cosmic Background */
+      .cosmic-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        overflow: hidden;
+      }
+
+      .stars, .stars2, .stars3 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+      }
+
+      .stars {
+        background-image: radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+                          radial-gradient(2px 2px at 40px 70px, #fff, transparent),
+                          radial-gradient(1px 1px at 50px 160px, #fff, transparent),
+                          radial-gradient(1px 1px at 130px 40px, #fff, transparent);
+        background-size: 200px 200px;
+        animation: starsAnimation 120s linear infinite;
+      }
+
+      .stars2 {
+        background-image: radial-gradient(1px 1px at 150px 150px, #fff, transparent),
+                          radial-gradient(1px 1px at 60px 170px, #fff, transparent),
+                          radial-gradient(1px 1px at 180px 10px, #fff, transparent);
+        background-size: 200px 200px;
+        animation: starsAnimation 240s linear infinite;
+      }
+
+      .stars3 {
+        background-image: radial-gradient(1px 1px at 90px 90px, rgba(255, 148, 78, 0.8), transparent),
+                          radial-gradient(1px 1px at 130px 160px, rgba(93, 58, 155, 0.8), transparent);
+        background-size: 200px 200px;
+        animation: starsAnimation 360s linear infinite;
+      }
+
+      @keyframes starsAnimation {
+        from { transform: translateY(0); }
+        to { transform: translateY(-200px); }
+      }
+
+      /* Sacred Geometry */
+      .sacred-geometry {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        height: 600px;
+        pointer-events: none;
+        opacity: 0.2;
+      }
+
+      .metatron-cube {
+        width: 100%;
+        height: 100%;
+        color: var(--color-primary);
+        animation: rotateSlowly 120s linear infinite;
+      }
+
+      @keyframes rotateSlowly {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      /* Floating Numbers */
+      .floating-number {
+        position: absolute;
+        font-size: 3rem;
+        font-weight: bold;
+        color: rgba(255, 148, 78, 0.3);
+        animation: floatNumber 20s infinite ease-in-out;
+        text-shadow: 0 0 20px rgba(255, 148, 78, 0.5);
+      }
+
+      .floating-number:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+      .floating-number:nth-child(2) { top: 20%; right: 15%; animation-delay: 3s; }
+      .floating-number:nth-child(3) { bottom: 30%; left: 20%; animation-delay: 6s; }
+      .floating-number:nth-child(4) { bottom: 20%; right: 10%; animation-delay: 9s; }
+
+      @keyframes floatNumber {
+        0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
+        50% { transform: translateY(-30px) scale(1.2); opacity: 0.6; }
+      }
+
+      .hero-container {
+        position: relative;
+        z-index: 10;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 60px 40px;
+        background: rgba(93, 58, 155, 0.1);
+        border: 2px solid rgba(93, 58, 155, 0.3);
+        border-radius: 30px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 60px rgba(93, 58, 155, 0.3);
+        animation: fadeInUp 1s ease-out;
+        min-width: 500px;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 50px;
+        letter-spacing: -0.02em;
+        text-shadow: 0 2px 10px rgba(255, 255, 255, 0.3), 0 4px 20px rgba(93, 58, 155, 0.3);
+        color: white;
+      }
+
+      .link-section {
+        margin-bottom: 30px;
+        animation: fadeInUp 1.2s ease-out;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        padding: 0 20px;
+      }
+
+      .link-section:last-child {
+        margin-bottom: 0;
+        animation: fadeInUp 1.4s ease-out;
+      }
+
+      .link-title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.9);
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        flex: 1;
+        text-align: left;
+      }
+
+      .button {
+        display: inline-block;
+        background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-dark) 100%);
+        color: white;
+        padding: 18px 50px;
+        font-size: 1.125rem;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(255, 148, 78, 0.3);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .button:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        transition: left 0.5s;
+      }
+
+      .button:hover:before {
+        left: 100%;
+      }
+
+      .button:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 8px 30px rgba(255, 148, 78, 0.5);
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2rem;
+        }
+        
+        .hero {
+          min-width: auto;
+          padding: 40px 20px;
+        }
+        
+        .sacred-geometry {
+          width: 400px;
+          height: 400px;
+        }
+        
+        .link-section {
+          flex-direction: column;
+          gap: 15px;
+        }
+        
+        .link-title {
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Cosmic Background Elements -->
+    <div class="cosmic-bg">
+      <div class="stars"></div>
+      <div class="stars2"></div>
+      <div class="stars3"></div>
+    </div>
+    
+    <!-- Sacred Geometry Pattern -->
+    <div class="sacred-geometry">
+      <svg class="metatron-cube" viewBox="0 0 400 400" fill="none">
+        <circle cx="200" cy="200" r="180" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+        <circle cx="200" cy="200" r="150" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+        <circle cx="200" cy="200" r="120" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+        <circle cx="200" cy="200" r="90" stroke="currentColor" stroke-width="0.5" opacity="0.15"/>
+        <circle cx="200" cy="200" r="60" stroke="currentColor" stroke-width="0.5" opacity="0.15"/>
+        <circle cx="200" cy="200" r="30" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
+      </svg>
+    </div>
+    
+    <!-- Floating Numbers -->
+    <div class="floating-number">11</div>
+    <div class="floating-number">22</div>
+    <div class="floating-number">33</div>
+    <div class="floating-number">7</div>
+    
+    <div class="hero-container">
+      <div class="hero">
+        <h1>Robbin's Website Management</h1>
+        
+        <div class="link-section">
+          <p class="link-title">Website</p>
+          <a href="https://nummerkoning.netlify.app/" class="button">Ga naar Website</a>
+        </div>
+        
+        <div class="link-section">
+          <p class="link-title">Lander 1</p>
+          <a href="https://nummerkoning.netlify.app/lander.html" class="button">Ga naar Landing Page</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
