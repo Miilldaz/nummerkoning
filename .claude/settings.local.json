@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(sed:*)",
+      "Bash(/opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/vendor/ripgrep/arm64-darwin/rg -A 2 -B 2 \"eeuwenoude technieken|geheimen die in je getallen|praktische tools en inzichten\" \"/Users/miladazizi/Desktop/Robbin file project/index.html\")",
+      "Bash(/opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/vendor/ripgrep/arm64-darwin/rg -n \"Sarah.*34|Mark.*42|Lisa.*29\" \"/Users/miladazizi/Desktop/Robbin file project/index.html\")"
+    ],
+    "deny": []
+  }
+}
